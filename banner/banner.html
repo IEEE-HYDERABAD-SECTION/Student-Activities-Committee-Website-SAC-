@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<style>
+		.banner{
+			background-image: url("ATTENDING (1).png");
+			padding:40px;
+			height:450px;
+		}
+		.speaker-img{
+			height:200px;
+			width:200px;
+			/*background-color: white;*/
+		}
+		.speaker-details p{
+		font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight:400;
+		}
+		.speaker-details h1{
+		font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight:800;
+		}
+		.event-content{
+			padding-top:40px;
+		}
+
+		.event-content p{
+			font-family: 'Montserrat', sans-serif;
+			font-size: 24px;
+			font-weight:400;
+		}
+		.event-content .bolder{
+			font-size: 60px;
+            font-weight:500;
+		}
+		.event-content a{
+			background-color: #1d243a;
+			color: white;
+			width: 130px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 18px;
+			font-weight:400;
+		}
+		@media only screen and (max-width: 600px) {
+			.speaker-img{
+			    height:170px;
+			    width:170px;
+		    }
+		    .banner{
+		    	height: 700px;
+		    }
+		}
+
+	</style>
+	<div class="speaker-welcome-banner">
+		<div class="row banner">
+			<div class="col-lg-12">
+				<div class="row">
+				    <div class="col-lg-2"><img src="IEEE HYD LOGO WHITE.png" alt="" height="50px"></div>
+				    <!-- <div class="col-lg-2"><img src="sn logo white.png" alt="" height="60px"></div> -->
+			    </div>
+			</div>
+			<div class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-6 order-1 order-md-2 speaker-details text-center">
+						<div>
+							<img src="2-removebg-preview.png" alt="" class="speaker-img rounded-circle">
+							<br><br>
+							<h1>Madiraju Pranay Kashyap</h1> 
+							<p>Web Design Lead, IEEE Hyderabad Sectoin SAC & CS Chapter</p>
+							
+						</div>
+					</div>
+					<div class="col-lg-6 order-2 order-md-1 event-content text-center">
+						<div>
+							<p>I AM<br><span class="bolder">ATTENDING</span><br><span class="thinner">OCTOBER 30-31, 2021</span></p>
+							<a class="btn" href="">Join Me</a>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		
+			
+				<!-- <div class="col-lg-4"><img src="IEEE HYD LOGO WHITE.png" alt=""></div>
+				<div class="col-lg-4"><img src="IEEE HYD LOGO WHITE.png" alt=""></div> -->
+				
+			<!-- </div> -->
+			
+		</div>
+		
+	</div>
+</body>
+</html>
