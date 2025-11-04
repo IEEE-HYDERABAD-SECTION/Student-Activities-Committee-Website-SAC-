@@ -7,7 +7,7 @@
   padding: 0.5em;
   font-size: 14px;
   position: absolute;
-  z-index : 20000;
+  z-index: 20000;
   top: 0px;
   left: 50%;
   font-family: tahoma, sans-serif;
@@ -16,8 +16,14 @@
   box-shadow: #777 0 0 6px;
 }
 /* basic reset */
-#forwardtoFriendDropDown div,#forwardtoFriendDropDown img,#forwardtoFriendDropDown span,#forwardtoFriendDropDown input,#forwardtoFriendDropDown textarea,#forwardtoFriendDropDown ul,#forwardtoFriendDropDown li,#forwardtoFriendDropDown button
-  {
+#forwardtoFriendDropDown div,
+#forwardtoFriendDropDown img,
+#forwardtoFriendDropDown span,
+#forwardtoFriendDropDown input,
+#forwardtoFriendDropDown textarea,
+#forwardtoFriendDropDown ul,
+#forwardtoFriendDropDown li,
+#forwardtoFriendDropDown button {
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -56,7 +62,8 @@
   position: relative;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent ul,#forwardtoFriendDropDown .ftf_mainContent li {
+#forwardtoFriendDropDown .ftf_mainContent ul,
+#forwardtoFriendDropDown .ftf_mainContent li {
   list-style: none;
   clear: both;
   text-align: right;
@@ -69,7 +76,8 @@
   padding: 4px 0px;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent input,#forwardtoFriendDropDown .ftf_mainContent textarea {
+#forwardtoFriendDropDown .ftf_mainContent input,
+#forwardtoFriendDropDown .ftf_mainContent textarea {
   font-size: 13px;
   font-family: tahoma, sans-serif;
   border: 1px solid #999;
@@ -78,7 +86,7 @@
   padding: 4px;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent  .ftf_errorMessage {
+#forwardtoFriendDropDown .ftf_mainContent .ftf_errorMessage {
   clear: both;
   float: right;
   width: 250px;
@@ -100,7 +108,8 @@
   visibility: visible;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent li.error input,#forwardtoFriendDropDown .ftf_mainContent li.error textarea {
+#forwardtoFriendDropDown .ftf_mainContent li.error input,
+#forwardtoFriendDropDown .ftf_mainContent li.error textarea {
   border: 1px solid #d34738;
   width: 240px;
 }
@@ -111,7 +120,7 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   display: none;
 }
 
@@ -136,15 +145,18 @@
   font-size: 12px;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent button.sendButton,#forwardtoFriendDropDown .ftf_mainContent button.doneButton {
+#forwardtoFriendDropDown .ftf_mainContent button.sendButton,
+#forwardtoFriendDropDown .ftf_mainContent button.doneButton {
   background-color: #e5752d;
   border-color: #c56729;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent button.sendButton:HOVER,#forwardtoFriendDropDown .ftf_mainContent button.doneButton:HOVER {
-  background-color: #F87E3B;
+#forwardtoFriendDropDown .ftf_mainContent button.sendButton:hover,
+#forwardtoFriendDropDown .ftf_mainContent button.doneButton:hover {
+  background-color: #f87e3b;
 }
 
-#forwardtoFriendDropDown .ftf_mainContent button.cancelButton:HOVER,#forwardtoFriendDropDown .ftf_mainContent button.sendAnotherButton:HOVER {
-  background-color: #D2D4D4;
+#forwardtoFriendDropDown .ftf_mainContent button.cancelButton:hover,
+#forwardtoFriendDropDown .ftf_mainContent button.sendAnotherButton:hover {
+  background-color: #d2d4d4;
 }

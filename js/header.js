@@ -1,4 +1,5 @@
-document.getElementById('header_from_js').innerHTML = '\
+document.getElementById("header_from_js").innerHTML =
+  '\
 <header class="header mb-3">\
         <div id="top">\
             <div style="padding: 1px 10px;">\
@@ -175,7 +176,7 @@ document.getElementById('header_from_js').innerHTML = '\
                     </ul>\
                   </li>\
                 <li class="nav-item"><a href="contact_us.html" class="nav-link" id="contact">Contact&nbsp;Us</a></li>\
-                 <li class="nav-item"><a href="parjanya.html" class="nav-link" id="parjanya">Parjanya&nbsp;2021</a></li>\
+                <li class="nav-item"><a href="parjanya.html" class="nav-link" id="parjanya">Parjanya&nbsp;2021</a></li>\
               </ul>\
             </div>\
         </div>\

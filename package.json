@@ -1,0 +1,30 @@
+{
+  "name": "ieee-hyderabad-sac-website",
+  "version": "1.0.0",
+  "description": "IEEE Hyderabad Student Activities Committee Website",
+  "scripts": {
+    "format": "prettier --write \"**/*.{css,js,json,md}\" --ignore-unknown",
+    "format:all": "prettier --write \"**/*.{html,css,js,json,md}\" --ignore-unknown",
+    "format:check": "prettier --check \"**/*.{css,js,json,md}\" --ignore-unknown",
+    "format:check:all": "prettier --check \"**/*.{html,css,js,json,md}\" --ignore-unknown",
+    "format:html": "prettier --write \"**/*.html\" --ignore-unknown",
+    "format:css": "prettier --write \"**/*.css\" --ignore-unknown",
+    "format:js": "prettier --write \"**/*.js\" --ignore-unknown",
+    "format:json": "prettier --write \"**/*.json\" --ignore-unknown",
+    "format:md": "prettier --write \"**/*.md\" --ignore-unknown"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "keywords": [
+    "ieee",
+    "website",
+    "student-activities",
+    "hyderabad"
+  ],
+  "author": "IEEE Hyderabad SAC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

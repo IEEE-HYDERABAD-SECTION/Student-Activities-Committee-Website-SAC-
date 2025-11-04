@@ -1,0 +1,101 @@
+# Dependencies and node modules
+node_modules/
+**/node_modules/**
+
+# Vendor and third-party libraries
+**/vendor/**
+**/assets/vendor/**
+**/lib/**
+**/libs/**
+
+# Minified and compiled files
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+*-min.*
+*-compiled.*
+
+# Build and distribution directories
+build/
+dist/
+**/build/**
+**/dist/**
+out/
+**/out/**
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Assets and media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+*.bmp
+*.tiff
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.rar
+*.tar
+*.gz
+
+# Image and media directories
+images/**
+img/**
+assets/img/**
+assets/images/**
+media/**
+assets/media/**
+
+# Generated files
+coverage/
+**/coverage/**
+.nyc_output/
+**/.nyc_output/**
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+logs/
+**/logs/**
+
+# Environment and config files that shouldn't be formatted
+.env*
+*.env
+
+# Files with known syntax errors (temporary - remove after fixing)
+adithyam.html
+chapter-affinity.html
+evolvex-21.html
+sac-core-team.html
+sn-team.html
+ssc.html
+ssc2021/index.html
+SSC2022.html
+SSC2023.html
+udgama.html
+umang.html
+unlock-15.html
+utsang.html
+ssc2021/assets/css/style.css
+ssc2021/assets/img/css/style.css
