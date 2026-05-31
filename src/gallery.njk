@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+title: Photo Gallery
+description: Photos from IEEE Hyderabad SAC events and activities.
+permalink: /gallery/
+---
+
+<style>
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--s-4); }
+  .gallery-item { border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 4 / 3; background: var(--surface-alt); position: relative; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease); }
+  .gallery-item:hover img { transform: scale(1.06); }
+  .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--s-3) var(--s-4); background: linear-gradient(transparent, rgba(11,31,58,0.85)); color: white; font-size: var(--fs-xs); font-weight: 600; opacity: 0; transition: opacity var(--dur-base) var(--ease); }
+  .gallery-item:hover .gallery-caption { opacity: 1; }
+</style>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resources</span>
+      <h1>Photo Gallery</h1>
+      <p>Moments from IEEE Hyderabad SAC events and activities.</p>
+    </div>
+
+    <h2 class="reveal" style="margin-bottom: var(--s-5)">2022</h2>
+    <div class="gallery-grid" style="margin-bottom: var(--s-8)">
+      <div class="gallery-item reveal">
+        <img src="/images/kmm rao sir pic .png" alt="IEEE SAC 2022 event" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/kmm rao sir pic 1 .png" alt="IEEE SAC 2022 event" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/Snapchat-1715262722.jpg" alt="IEEE SAC 2022" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/WhatsApp Image 2022-09-26 at 9.08.22 AM (1).jpeg" alt="IEEE SAC 2022" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/WhatsApp Image 2022-10-02 at 7.55.41 PM.jpeg" alt="IEEE SAC 2022" loading="lazy" />
+      </div>
+    </div>
+
+    <h2 class="reveal" style="margin-bottom: var(--s-5)">2021</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="/images/prashanth_all.jpg" alt="IEEE SAC 2021" loading="lazy" />
+        <div class="gallery-caption">27th August, 2021</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/r10_award_2_prashanth.jpg" alt="IEEE Region 10 Educational Activities Outstanding Volunteer Award 2021" loading="lazy" />
+        <div class="gallery-caption">IEEE R10 Educational Activities Outstanding Volunteer Award 2021</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/r10_award_prashanth.jpg" alt="IEEE Region 10 SAC Outstanding Volunteer Award 2021" loading="lazy" />
+        <div class="gallery-caption">IEEE R10 SAC Outstanding Volunteer Award 2021</div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/IMG_7653.JPG" alt="IEEE SAC 2021" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/IMG_8980.JPG" alt="IEEE SAC 2021" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal">
+        <img src="/images/IMG_9043.JPG" alt="IEEE SAC 2021" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

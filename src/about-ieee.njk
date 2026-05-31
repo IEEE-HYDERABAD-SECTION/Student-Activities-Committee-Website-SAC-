@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: About IEEE
+description: IEEE — the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+permalink: /about-ieee/
+---
+
+<section class="section" style="background: linear-gradient(135deg, color-mix(in srgb, var(--ieee-blue) 8%, transparent), var(--surface))">
+  <div class="container">
+    <div style="display: grid; gap: var(--s-7); align-items: center; grid-template-columns: 1fr 1fr" class="reveal">
+      <div>
+        <span class="eyebrow">About IEEE</span>
+        <h1>Who We Are</h1>
+        <p style="font-size: var(--fs-md)">IEEE — <strong>world's largest technical professional organization</strong> — is dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities.</p>
+        <div style="display: flex; gap: var(--s-3); flex-wrap: wrap; margin-top: var(--s-5)">
+          <a href="https://ieee.org/" class="btn btn-primary" target="_blank" rel="noopener">Know More</a>
+          <a href="https://www.ieee.org/membership-application/public/join.html?grade=Student&promo=STUJOIN" class="btn btn-ghost" target="_blank" rel="noopener">Join IEEE Now</a>
+        </div>
+      </div>
+      <div>
+        <img src="/images/home/1.jpg" alt="IEEE" style="border-radius: var(--r-lg); width: 100%" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">IEEE at a Glance</span>
+      <h2>IEEE by the Numbers</h2>
+      <p>A snapshot of the world's largest engineering and technology organization.</p>
+    </div>
+    <div class="grid grid-3">
+      {% set ieeeStats = [
+        "More than 419,000 members in more than 160 countries, more than 50% of whom are from outside the United States.",
+        "More than 124,000 Student members.",
+        "342 Sections in ten geographic Regions worldwide.",
+        "1,834 Chapters that unite local members with similar technical interests.",
+        "3,422 Student Branches at colleges and universities in over 100 countries.",
+        "2,600 Student Branch chapters of IEEE technical societies.",
+        "568 affinity groups including Young Professionals (YP), Women in Engineering (WIE), Life Members (LM), and IEEE Entrepreneurship.",
+        "39 technical Societies and seven technical councils representing the wide range of IEEE technical interests.",
+        "More than 5 million documents in the IEEE Xplore® digital library, with more than 12 million downloads each month.",
+        "Has more than 1,800 conferences in IEEE Xplore.",
+        "Has over 1,200 active standards and more than 650 standards under development.",
+        "Publishes approximately 200 transactions, journals, and magazines.",
+        "Sponsors more than 1,900 conferences in 103 countries.",
+        "Partnering with more than 1,400 non-IEEE entities globally.",
+        "Attracting more than 547,000 conference attendees.",
+        "Publishing more than 1,800 conference proceedings via IEEE Xplore."
+      ] %}
+      {% for stat in ieeeStats %}
+        <div class="card reveal" style="padding: var(--s-5); align-items: flex-start; gap: var(--s-3)">
+          <div style="width: 36px; height: 36px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--ieee-blue) 15%, transparent); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ieee-blue)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <p style="margin: 0; font-size: var(--fs-sm)">{{ stat }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

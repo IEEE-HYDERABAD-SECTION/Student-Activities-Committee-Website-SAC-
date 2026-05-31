@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: Student Network Team
+description: The IEEE Hyderabad SAC Student Network (SN) Team coordinates student branch activities across the region.
+permalink: /sn-team/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{ team.sn.year }}</span>
+      <h1>{{ team.sn.title }}</h1>
+      {% if team.sn.description %}<p>{{ team.sn.description }}</p>{% endif %}
+    </div>
+
+    {% if team.sn.members.length %}
+      <div class="team-grid">
+        {% for m in team.sn.members %}
+          <div class="team-card reveal">
+            <img class="team-photo" src="{{ m.photo or '/images/SN_TEAM_2025-26/default.png' }}" alt="{{ m.name }}" loading="lazy" />
+            <p class="team-name">{{ m.name }}</p>
+            <p class="team-role">{{ m.role }}</p>
+            {% if m.institution %}<p class="team-org">{{ m.institution }}</p>{% endif %}
+            {% if m.linkedin or m.email %}
+              <div class="flex flex-center" style="gap: var(--s-2); margin-top: var(--s-3)">
+                {% if m.linkedin %}<a href="{{ m.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.3a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.7c0-1.1-.4-1.9-1.4-1.9-.8 0-1.3.5-1.5 1.1v5.5h-3v-9h3v1.2A3.4 3.4 0 0 1 16 10c2.2 0 3 1.5 3 3.7z"/></svg></a>{% endif %}
+                {% if m.email %}<a href="mailto:{{ m.email }}" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>{% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p style="text-align: center; color: var(--ink-mute); padding: var(--s-7) 0">
+        Team roster is being updated. Members can be added via the <a href="/admin/">Content Manager</a>.
+      </p>
+    {% endif %}
+  </div>
+</section>

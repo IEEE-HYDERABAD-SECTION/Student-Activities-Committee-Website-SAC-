@@ -1,0 +1,40 @@
+{# Render one event card. Expects: event = {title, date, venue, mode, poster, description, register_url, status} #}
+<article class="card reveal">
+  {% if event.poster %}
+    <div class="card-image">
+      <img src="{{ event.poster }}" alt="{{ event.title }} poster" loading="lazy" />
+    </div>
+  {% endif %}
+  <div class="card-body">
+    <div class="flex" style="justify-content: space-between; align-items: center; gap: var(--s-3)">
+      <span class="pill {% if event.status == 'past' %}pill-past{% else %}pill-upcoming{% endif %}">
+        {{ "Past" if event.status == "past" else "Upcoming" }}
+      </span>
+      {% if event.mode %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ event.mode }}</span>{% endif %}
+    </div>
+    <h3>{{ event.title }}</h3>
+    <div class="card-meta">
+      {% if event.date %}
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          {{ event.date | displayDate }}
+        </span>
+      {% endif %}
+      {% if event.venue %}
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {{ event.venue }}
+        </span>
+      {% endif %}
+    </div>
+    {% if event.description %}<p style="margin: 0; font-size: var(--fs-sm)">{{ event.description | truncate(140) }}</p>{% endif %}
+    {% if event.register_url and event.status != "past" %}
+      <a class="btn btn-primary btn-sm" href="{{ event.register_url }}" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">
+        Register
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    {% elif event.register_url %}
+      <a class="btn btn-ghost btn-sm" href="{{ event.register_url }}" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">View details</a>
+    {% endif %}
+  </div>
+</article>

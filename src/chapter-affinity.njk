@@ -1,0 +1,76 @@
+---
+layout: layouts/base.njk
+title: Chapters & Affinity Groups
+description: IEEE Hyderabad Section Chapters and Affinity Groups — Computer Society, WIE, TEMS, Education Society, and more.
+permalink: /chapter-affinity/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">About</span>
+      <h1>IEEE Hyderabad Section<br>Chapters &amp; Affinity Groups</h1>
+    </div>
+
+    {% set chapters = [
+      {
+        name: "IEEE Computer Society",
+        description: "The IEEE Computer Society traces its origins to the Subcommittee on Large-Scale Computing, established in 1946. The IEEE CS Chapter under Hyderabad Section is driven with a Technology Passion to make a difference to the community, promoting technology knowledge and its relevance to make a strong impact to societal change. Computing Edge is the one-stop magazine with top news and research on all aspects of computing technology.",
+        link: "https://www.computer.org/",
+        image: "/images/chapters_and_groups/ieeecs.jpg"
+      },
+      {
+        name: "IEEE WIE Affinity Group",
+        description: "IEEE Women in Engineering (WIE) is one of the largest international professional organizations dedicated to promoting women engineers and scientists and inspiring girls around the world to follow their academic interests in a career in engineering and science.",
+        link: "https://wie.ieee.org/"
+      },
+      {
+        name: "IEEE TEMS Chapter",
+        description: "The IEEE Technology and Engineering Management Society (TEMS) encompasses the management sciences and practices required for defining, implementing, and managing engineering and technology. Topics include technology policy, research, product design, innovation, entrepreneurship, program management, strategy, education, and the socioeconomic impact of engineering.",
+        link: "https://www.ieee-tems.org/"
+      },
+      {
+        name: "IEEE Life Members Affinity Group",
+        description: "Life members represent an invaluable repository of personal experiences involving the history of areas of interest to IEEE. The Life Members Affinity Group enables Life members to retain active IEEE associations, contribute to the social good in their communities, advance the professional interests of IEEE, and enjoy each other's company.",
+        link: "https://www.ieee.org/content/ieee-org/en/communities/life-members/groups.html/"
+      },
+      {
+        name: "IEEE Education Society",
+        description: "Founded in 1957, the IEEE Education Society is dedicated to ensuring high-quality education in science and engineering. It promotes, advances, and disseminates state-of-the-art scientific information related to educational technology, supporting local educators through workshops, publications, international conferences, and distinguished lecturer programs.",
+        link: "https://ieee-edusociety.org/"
+      },
+      {
+        name: "IEEE MTT/AP/EMC Joint Chapter",
+        description: "The IEEE Hyderabad Section MTT/AP/EMC Joint Chapter serves professionals in antennas and propagation, microwave engineering, and electromagnetics. MTT-S focuses on theory and applications of radio-frequency technologies; AP Society covers analysis and design of radiation and propagation; EMC Society fosters development in the electromagnetic environment.",
+        link: "https://ieeehyderabad.org/chapters-ag/mtt-ap-emc"
+      },
+      {
+        name: "IEEE Sensors Council",
+        description: "The IEEE Sensors Council focuses on the theory, design, fabrication, manufacturing and application of devices for sensing and transducing physical, chemical, and biological phenomena. It sponsors the IEEE Sensors Journal, IEEE Sensors Letters, IEEE Internet of Things Journal, and the flagship IEEE SENSORS Conference.",
+        link: "http://www.ieee-sensors.org/"
+      },
+      {
+        name: "IEEE Computational Intelligence Society",
+        description: "Formed as the IEEE Neural Networks Council in 1989, the IEEE CIS covers the theory, design, application, and development of biologically and linguistically motivated computational paradigms including Neural Networks, Fuzzy Systems, and Evolutionary Computation. Mission: to advance nature-inspired computational paradigms in science and engineering.",
+        link: "https://cis.ieee.org/"
+      }
+    ] %}
+
+    <div style="display: flex; flex-direction: column; gap: var(--s-8)">
+      {% for ch in chapters %}
+        <div class="card reveal" style="padding: var(--s-6)">
+          <div style="display: grid; gap: var(--s-5); align-items: start; grid-template-columns: 1fr auto">
+            <div>
+              <h2 style="color: var(--ieee-blue); font-size: var(--fs-lg)">{{ ch.name }}</h2>
+              <p>{{ ch.description }}</p>
+              <a href="{{ ch.link }}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Learn More</a>
+            </div>
+            {% if ch.image %}
+              <img src="{{ ch.image }}" alt="{{ ch.name }}" style="border-radius: var(--r-md); max-width: 200px; object-fit: cover; height: 140px" loading="lazy" />
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

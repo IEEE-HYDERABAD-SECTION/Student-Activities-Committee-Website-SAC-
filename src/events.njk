@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: Events
+description: Upcoming and past IEEE Hyderabad SAC events — workshops, summits, competitions, and congresses.
+permalink: /events/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">2026 Calendar</span>
+      <h1>SAC Events</h1>
+      <p>Stay updated on every workshop, summit, and competition organized by the IEEE Hyderabad Section Student Activities Committee.</p>
+    </div>
+
+    {% if events.upcoming.length %}
+      <h2 style="margin-top: var(--s-7)">Upcoming</h2>
+      <div class="grid grid-3" style="margin-top: var(--s-5)">
+        {% for event in events.upcoming %}
+          {% include "partials/event-card.njk" %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p style="text-align: center; color: var(--ink-mute); padding: var(--s-7) 0">No upcoming events scheduled — check back soon.</p>
+    {% endif %}
+
+    {% if events.past.length %}
+      <h2 id="past" style="margin-top: var(--s-9)">Past Events</h2>
+      <div class="grid grid-3" style="margin-top: var(--s-5)">
+        {% for event in events.past %}
+          {% include "partials/event-card.njk" %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

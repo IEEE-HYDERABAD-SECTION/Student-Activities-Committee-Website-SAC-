@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+title: Membership Benefits
+description: IEEE Student and Graduate Student membership benefits — access to the world's largest engineering community, resources, and opportunities.
+permalink: /membership-benefits/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Membership & Benefits</span>
+      <h1>Become an <span style="color: var(--ieee-blue)">IEEE</span> Member</h1>
+      <p>As a Student/Graduate Student Member of IEEE you get access to a global community of 420,000+ professionals.</p>
+    </div>
+
+    <div class="grid grid-3">
+      {% set benefits = [
+        "Join a community of over 420,000 technology and engineering professionals united by a common desire to continuously learn, interact, collaborate, and innovate.",
+        "Collaborate with IEEE colleagues and member groups, online or in person, to build a support group for your profession, industry, or project.",
+        "Obtain access to the largest library of electrical engineering, computer science, and electronics technical literature as well as the latest technology trends, industry news, and events.",
+        "Get the resources and opportunities you need to keep on top of changes in technology.",
+        "Get involved in standards development.",
+        "Network with other professionals in your local area or within a specific technical interest.",
+        "Are mentored by professional engineers and technologists."
+      ] %}
+      {% for b in benefits %}
+        <div class="card reveal" style="padding: var(--s-5); gap: var(--s-3)">
+          <div style="width: 36px; height: 36px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--ieee-blue) 12%, transparent); display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ieee-blue)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <p style="margin: 0; font-size: var(--fs-sm)">{{ b }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <p class="reveal" style="text-align: center; margin-top: var(--s-6); color: var(--ink-mute); font-size: var(--fs-sm); max-width: 700px; margin-inline: auto">
+      <em>Note: A Student/Graduate Student member must carry at least 50% of a normal full-time academic program. The total cumulative period for a member to hold the Student member grade and/or the Graduate Student member grade is limited to eight years.</em>
+    </p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Popular Benefits</span>
+      <h2>Top Student Benefits</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3><a href="https://students.ieee.org/xtreme/" target="_blank" rel="noopener">IEEEXtreme</a></h3>
+        <p style="margin: 0">A global 24-hour programming competition open to IEEE Student members.</p>
+      </div>
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3><a href="https://students.ieee.org/awards/" target="_blank" rel="noopener">Awards Program</a></h3>
+        <p style="margin: 0">Recognition programs celebrating outstanding IEEE student members.</p>
+      </div>
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3><a href="https://students.ieee.org/funding-for-students/" target="_blank" rel="noopener">Scholarships</a></h3>
+        <p style="margin: 0">Funding opportunities and scholarships for IEEE student members.</p>
+      </div>
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3><a href="https://students.ieee.org/ieee-events/" target="_blank" rel="noopener">Conferences</a></h3>
+        <p style="margin: 0">Reduced-rate access to IEEE conferences and events worldwide.</p>
+      </div>
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3>Potentials Magazine</h3>
+        <p style="margin: 0">IEEE's magazine for students and young professionals.</p>
+      </div>
+      <div class="card reveal" style="padding: var(--s-5)">
+        <h3><a href="https://students.ieee.org/funding-for-students/" target="_blank" rel="noopener">Student Travel Grants</a></h3>
+        <p style="margin: 0">Grants to help students attend IEEE conferences around the world.</p>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top: var(--s-7)">
+      <a href="https://www.ieee.org/membership-application/public/join.html?grade=Student&promo=STUJOIN" class="btn btn-primary" target="_blank" rel="noopener">Join IEEE Today</a>
+      <a href="/IEEE-Membership.pdf" class="btn btn-ghost" target="_blank" rel="noopener" style="margin-left: var(--s-3)">How to Apply (PDF)</a>
+    </div>
+  </div>
+</section>

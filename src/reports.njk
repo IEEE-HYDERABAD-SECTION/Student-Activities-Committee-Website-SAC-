@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Reports Archive
+description: Archive of IEEE Hyderabad SAC event reports and documentation.
+permalink: /reports/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resources</span>
+      <h1>Reports Archive</h1>
+      <p>A complete archive of IEEE Hyderabad Section SAC event reports.</p>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--s-2)">
+      {% set archiveReports = [
+        { title: "Report on Ideathon", href: "/report/IDEATHON CONTEST REPORT.pdf" },
+        { title: "Report on IEEE SIGHT Day Celebrations", href: "/report/IEEE SIGHT DAY CELEBRATIONS REPORT.pdf" },
+        { title: "Report on IEEE PES DAY 2021 Inauguration", href: "/report/INAUGURATION REPORT OF IEEE PES DAY 2021.pdf" },
+        { title: "Report on NAARI Women Coding Competition", href: "/report/NAARI Women Coding Competition-Report.pdf" },
+        { title: "Report on Renewable Energy Webinar", href: "/report/Renewable Energy Webinar Report.pdf" },
+        { title: "Report on Harnessing the power of digital to optimize logistics", href: "/report/REPORT_ Webinar on Harnessing the power of digital to optimize logistics.pdf" },
+        { title: "Report on CLEAN ENERGY FOR A SUSTAINABLE FUTURE", href: "/report/Report 1.pdf" },
+        { title: "Report on KEY TECHNOLOGY TRENDS IN CLEAN ENERGY TRANSITION", href: "/report/Report 2.pdf" },
+        { title: "Report on Satellite Communication", href: "/report/Puneeth kumar mishra.pdf" },
+        { title: "Report on IEEE Hyderabad Section SAC SB Chairs and Advisers Summit 2021", href: "/report/sac chairs and advisory summit.pdf" }
+      ] %}
+      {% for r in archiveReports %}
+        <div class="card reveal" style="padding: var(--s-4)">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--s-4)">
+            <span style="font-weight: 500">{{ r.title }}</span>
+            <a href="{{ r.href }}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener" style="flex-shrink: 0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+title: ""
+permalink: /
+eleventyNavigation:
+  key: Home
+---
+
+{% if site.announcement.enabled %}
+  <div style="background: var(--ieee-blue); color: white; text-align: center; padding: var(--s-3) var(--s-4); font-size: var(--fs-sm)">
+    <a href="{{ site.announcement.link or '#' }}" style="color: white; font-weight: 600">{{ site.announcement.text }}</a>
+  </div>
+{% endif %}
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">{{ site.hero.eyebrow }}</span>
+        <h1>{{ site.hero.title }}</h1>
+        <p style="font-size: var(--fs-md); max-width: 56ch">{{ site.hero.subtitle }}</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="{{ site.hero.primary_cta.href }}">{{ site.hero.primary_cta.label }}</a>
+          <a class="btn btn-ghost" href="{{ site.hero.secondary_cta.href }}">{{ site.hero.secondary_cta.label }}</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <img src="{{ nav.brand.secondary_logo }}" alt="{{ nav.brand.secondary_alt }}" />
+      </div>
+    </div>
+
+    <div class="stats">
+      {% for s in site.stats %}
+        <div class="stat reveal">
+          <span class="stat-value">{{ s.value }}</span>
+          <span class="stat-label">{{ s.label }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if events.upcoming.length %}
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What's Next</span>
+      <h2>Upcoming Events</h2>
+      <p>Workshops, summits, and competitions across Hyderabad Section.</p>
+    </div>
+    <div class="grid grid-3">
+      {% for event in events.upcoming.slice(0, 6) %}
+        {% include "partials/event-card.njk" %}
+      {% endfor %}
+    </div>
+    <div class="text-center" style="margin-top: var(--s-6)">
+      <a class="btn btn-ghost" href="/events/">View all events →</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">About SAC</span>
+      <h2>Empowering Student Branches</h2>
+      <p>The Student Activities Committee coordinates leadership, technical, and humanitarian programs for over 100 IEEE student branches across the Hyderabad Section.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card card-glass reveal" style="padding: var(--s-6)">
+        <h3>Leadership Development</h3>
+        <p>Annual congresses, training programs, and mentorship to grow the next generation of IEEE leaders.</p>
+        <a href="/sac-award-programs/" class="btn btn-ghost btn-sm" style="align-self: flex-start">Explore programs →</a>
+      </div>
+      <div class="card card-glass reveal" style="padding: var(--s-6)">
+        <h3>Technical Excellence</h3>
+        <p>Hackathons, competitions, and project showcases that connect students with industry and research.</p>
+        <a href="/events/" class="btn btn-ghost btn-sm" style="align-self: flex-start">See events →</a>
+      </div>
+      <div class="card card-glass reveal" style="padding: var(--s-6)">
+        <h3>Community Impact</h3>
+        <p>Humanitarian outreach and IEEE SIGHT programs that turn engineering into social good.</p>
+        <a href="/humanitarian-activities/" class="btn btn-ghost btn-sm" style="align-self: flex-start">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
