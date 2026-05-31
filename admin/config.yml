@@ -1,0 +1,181 @@
+# Decap CMS configuration — IEEE Hyderabad SAC
+#
+# BACKEND SETUP (one-time, for the maintainer):
+#   1. Create a GitHub OAuth App at https://github.com/settings/developers
+#      - Homepage URL:     https://sac.ieeehyd.org
+#      - Callback URL:     https://<your-oauth-worker>.workers.dev/callback
+#   2. Deploy https://github.com/sveltia/sveltia-cms-auth as a free Cloudflare Worker.
+#      Set worker env vars: GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET.
+#   3. Replace `base_url` below with the Worker URL and update `repo` to "<owner>/<repo>".
+#
+# Once configured, editors visit /admin/, click "Login with GitHub", and start editing.
+
+backend:
+  name: github
+  repo: IEEE-HYDERABAD-SECTION/Student-Activities-Committee-Website-SAC- # TODO: set to actual <org>/<repo>
+  branch: main
+  base_url: https://ieee-sac-auth.matrix2.workers.dev
+
+publish_mode: editorial_workflow # creates PRs instead of direct commits — safer for non-tech editors
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://sac.ieeehyd.org
+display_url: https://sac.ieeehyd.org
+logo_url: /images/ieee-hyderabad-sac-logo.png
+
+collections:
+  # ---------------------------------------------------------------------------
+  # EVENTS — one JSON file per event in /data/events/
+  # ---------------------------------------------------------------------------
+  - name: events
+    label: "Events"
+    label_singular: "Event"
+    folder: data/events
+    create: true
+    delete: true
+    slug: "{{year}}-{{slug}}"
+    extension: json
+    format: json
+    summary: "{{title}} — {{date | date('DD MMM YYYY')}}"
+    sortable_fields: [date, title]
+    view_filters:
+      - label: "Upcoming"
+        field: date
+        pattern: "^(?:2026|2027|2028)"
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date & Time", name: date, widget: datetime, picker_utc: false }
+      - { label: "End Date (optional)", name: end_date, widget: datetime, required: false, picker_utc: false }
+      - { label: "Venue / Location", name: venue, widget: string, required: false }
+      - label: "Mode"
+        name: mode
+        widget: select
+        options: ["in-person", "online", "hybrid"]
+        default: "in-person"
+      - { label: "Poster Image", name: poster, widget: image, required: false, media_folder: "/assets/events", public_folder: "/assets/events" }
+      - { label: "Short Description", name: description, widget: text, required: false }
+      - { label: "Registration / Details URL", name: register_url, widget: string, required: false }
+      - { label: "vTools Event ID", name: vtools_id, widget: string, required: false, hint: "Number from the vTools URL, e.g. 538749" }
+      - { label: "Feature on Homepage?", name: featured, widget: boolean, default: false }
+      - { label: "Tags", name: tags, widget: list, required: false, default: [] }
+
+  # ---------------------------------------------------------------------------
+  # EVENT REPORTS — PDFs + summaries
+  # ---------------------------------------------------------------------------
+  - name: reports
+    label: "Event Reports"
+    label_singular: "Report"
+    folder: data/reports
+    create: true
+    delete: true
+    slug: "{{year}}-{{slug}}"
+    extension: json
+    format: json
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: date }
+      - { label: "Linked Event Slug (optional)", name: event_ref, widget: string, required: false }
+      - { label: "Summary", name: summary, widget: text, required: false }
+      - { label: "PDF Report", name: pdf, widget: file, required: false, media_folder: "/assets/reports", public_folder: "/assets/reports" }
+      - label: "Photo Gallery"
+        name: photos
+        widget: list
+        required: false
+        field: { label: "Photo", name: photo, widget: image, media_folder: "/assets/reports", public_folder: "/assets/reports" }
+
+  # ---------------------------------------------------------------------------
+  # SN TEAM — single JSON file per year, list of members
+  # ---------------------------------------------------------------------------
+  - name: sn_team
+    label: "SN Team"
+    files:
+      - file: data/team/sn-2025-26.json
+        label: "SN Team 2025-26"
+        name: sn_2025_26
+        fields:
+          - { label: "Year", name: year, widget: string }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Description", name: description, widget: text, required: false }
+          - label: "Members"
+            name: members
+            widget: list
+            fields:
+              - { label: "Full Name", name: name, widget: string }
+              - { label: "Role / Designation", name: role, widget: string }
+              - { label: "Institution", name: institution, widget: string, required: false }
+              - { label: "Photo", name: photo, widget: image, media_folder: "/images/SN_TEAM_2025-26", public_folder: "/images/SN_TEAM_2025-26" }
+              - { label: "Email", name: email, widget: string, required: false }
+              - { label: "LinkedIn", name: linkedin, widget: string, required: false }
+
+  - name: core_team
+    label: "SAC Core Team"
+    files:
+      - file: data/team/core-2026-27.json
+        label: "SAC Executive Committee 2026-27"
+        name: core_2026_27
+        fields:
+          - { label: "Year", name: year, widget: string }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Description", name: description, widget: text, required: false }
+          - label: "Members"
+            name: members
+            widget: list
+            fields:
+              - { label: "Full Name", name: name, widget: string }
+              - { label: "Role", name: role, widget: string }
+              - { label: "Institution", name: institution, widget: string, required: false }
+              - { label: "Photo", name: photo, widget: image, media_folder: "/images/core-team", public_folder: "/images/core-team" }
+              - { label: "Email", name: email, widget: string, required: false }
+              - { label: "LinkedIn", name: linkedin, widget: string, required: false }
+
+  # ---------------------------------------------------------------------------
+  # HOMEPAGE / SITE SETTINGS — hero, announcements, stats
+  # ---------------------------------------------------------------------------
+  - name: site
+    label: "Homepage & Site Settings"
+    files:
+      - file: data/site.json
+        label: "Site Settings"
+        name: site_settings
+        fields:
+          - { label: "Site Title", name: title, widget: string }
+          - { label: "Tagline", name: tagline, widget: string }
+          - { label: "Description (for SEO)", name: description, widget: text }
+          - { label: "Site URL", name: url, widget: string }
+          - { label: "Contact Email", name: contact_email, widget: string }
+          - label: "Hero Section"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow Text", name: eyebrow, widget: string }
+              - { label: "Hero Title", name: title, widget: string }
+              - { label: "Hero Subtitle", name: subtitle, widget: text }
+              - label: "Primary CTA"
+                name: primary_cta
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
+              - label: "Secondary CTA"
+                name: secondary_cta
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
+          - label: "Announcement Bar"
+            name: announcement
+            widget: object
+            fields:
+              - { label: "Show?", name: enabled, widget: boolean, default: false }
+              - { label: "Text", name: text, widget: string, required: false }
+              - { label: "Link", name: link, widget: string, required: false }
+          - label: "Stats"
+            name: stats
+            widget: list
+            fields:
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - { label: "Featured Event Slug", name: featured_event_slug, widget: string, required: false, hint: "Slug of the event to feature; leave blank to use the next upcoming event" }
