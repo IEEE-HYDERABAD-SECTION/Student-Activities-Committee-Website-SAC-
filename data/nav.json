@@ -1,0 +1,164 @@
+{
+  "brand": {
+    "primary_logo": "/images/ieee-hyderabad-sac-logo.png",
+    "primary_alt": "IEEE Hyderabad Section Student Activities Committee",
+    "secondary_logo": "/images/SN_Logo_Circular.png",
+    "secondary_alt": "IEEE Student Network Team",
+    "section_link": "https://ieeehyderabad.org/",
+    "ieee_link": "https://ieee.org/"
+  },
+  "primary": [
+    { "label": "Home", "href": "/" },
+    {
+      "label": "About",
+      "columns": [
+        {
+          "heading": "SAC",
+          "links": [
+            { "label": "About SAC", "href": "/about-sac/" },
+            { "label": "SAC ExeCom", "href": "/sac-core-team/" },
+            { "label": "SN Team", "href": "/sn-team/" },
+            { "label": "Student Branch Details", "href": "/student-branch-details/" },
+            { "label": "Chapters & Affinity Groups", "href": "/chapter-affinity/" }
+          ]
+        },
+        {
+          "heading": "IEEE",
+          "links": [
+            { "label": "IEEE", "href": "https://ieee.org/", "external": true },
+            { "label": "IEEE R10 SAC", "href": "https://sac.ieeer10.org/", "external": true },
+            { "label": "IEEE Students", "href": "https://students.ieee.org/", "external": true },
+            { "label": "IEEE Hyderabad", "href": "https://ieeehyd.org/", "external": true }
+          ]
+        },
+        {
+          "heading": "More",
+          "links": [
+            { "label": "IEEE Xplore Digital Library", "href": "https://ieeexplore.ieee.org/Xplore/home.jsp", "external": true },
+            { "label": "Collabratec", "href": "https://ieee-collabratec.ieee.org/", "external": true },
+            { "label": "IEEE Xtreme", "href": "https://ieeextreme.org/", "external": true },
+            { "label": "IEEE Standards", "href": "https://standards.ieee.org/", "external": true },
+            { "label": "IEEE Spectrum", "href": "https://spectrum.ieee.org/", "external": true }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Membership",
+      "columns": [
+        {
+          "heading": "Get Started",
+          "links": [
+            { "label": "Membership Benefits", "href": "/membership-benefits/" },
+            { "label": "How to apply", "href": "/IEEE-Membership.pdf", "external": true },
+            { "label": "Young Professionals", "href": "/young-professionals/" }
+          ]
+        },
+        {
+          "heading": "Perks",
+          "links": [
+            { "label": "Collabratec", "href": "https://ieee-collabratec.ieee.org/", "external": true },
+            { "label": "IEEE Benefits", "href": "https://students.ieee.org/benefits/", "external": true },
+            { "label": "IEEE.tv", "href": "https://ieeetv.ieee.org/", "external": true },
+            { "label": "Member Discounts", "href": "https://www.ieee.org/membership/discounts/index.html", "external": true }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Opportunities",
+      "columns": [
+        {
+          "heading": "For Students",
+          "links": [
+            { "label": "SAC Award Programs", "href": "/sac-award-programs/" },
+            { "label": "Professional Awareness", "href": "/student-professional-awareness/" },
+            { "label": "Contests for Students", "href": "https://students.ieee.org/contests-for-students/", "external": true },
+            { "label": "Funding & Grants", "href": "https://students.ieee.org/funding/", "external": true },
+            { "label": "Humanitarian Activities", "href": "/humanitarian-activities/" },
+            { "label": "Badging", "href": "https://ct.ieee.org/badges-1/", "external": true }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Events",
+      "columns": [
+        {
+          "heading": "Events",
+          "links": [
+            { "label": "Upcoming Events", "href": "/events/" },
+            { "label": "Past Events", "href": "/events/#past" },
+            { "label": "Event Reports", "href": "/event-reports/" }
+          ]
+        },
+        {
+          "heading": "Congress & Flagship",
+          "links": [
+            { "label": "SSC", "href": "/archive/ssc.html" },
+            { "label": "SSC 2023", "href": "/archive/SSC2023.html" },
+            { "label": "SSC 2022", "href": "/archive/SSC2022.html" },
+            { "label": "Adithyam 2021", "href": "/archive/adithyam.html" },
+            { "label": "Parjanya 2021", "href": "/archive/parjanya.html" },
+            { "label": "IGEN 2020", "href": "/archive/igen.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Resources",
+      "columns": [
+        {
+          "heading": "Resources",
+          "links": [
+            { "label": "Photo Gallery", "href": "/gallery/" },
+            { "label": "Event Reports", "href": "/event-reports/" },
+            { "label": "Reports Archive", "href": "/reports/" },
+            { "label": "SB Development Calendar", "href": "/resources/student_branch_development_calendar.pdf", "external": true },
+            { "label": "Virtual Speakers", "href": "https://students.ieee.org/about-virtual-speakers/", "external": true }
+          ]
+        },
+        {
+          "heading": "Help & Tools",
+          "links": [
+            { "label": "Support Center", "href": "https://supportcenter.ieee.org/app/answers/list", "external": true },
+            { "label": "IEEE R10 vTools Guide", "href": "/resources/IEEE R10 Vtools.pptx", "external": true },
+            { "label": "Volunteer ID Generator", "href": "/ID/" }
+          ]
+        }
+      ]
+    },
+    { "label": "Contact", "href": "/contact-us/" }
+  ],
+  "footer": {
+    "tagline": "Student Activities Committee, IEEE Hyderabad Section",
+    "address": "No: 644-645, Al-Karim Trade Center, Ranigunj, Secunderabad 500003",
+    "social": [
+      { "label": "Facebook", "href": "https://www.facebook.com/ieeehydsac", "icon": "facebook" },
+      { "label": "Instagram", "href": "https://instagram.com/ieeehydsac", "icon": "instagram" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ieee-hyderabad-sac-0b1292209/", "icon": "linkedin" }
+    ],
+    "groups": [
+      {
+        "heading": "Quick Links",
+        "links": [
+          { "label": "About IEEE", "href": "/about-ieee/" },
+          { "label": "About SAC", "href": "/about-sac/" },
+          { "label": "SAC ExeCom", "href": "/sac-core-team/" },
+          { "label": "SN Team", "href": "/sn-team/" },
+          { "label": "Gallery", "href": "/gallery/" },
+          { "label": "Contact", "href": "/contact-us/" }
+        ]
+      },
+      {
+        "heading": "IEEE Programs",
+        "links": [
+          { "label": "Collabratec", "href": "https://ieee-collabratec.ieee.org/", "external": true },
+          { "label": "IEEE Xtreme", "href": "https://ieeextreme.org", "external": true },
+          { "label": "IEEE MADC", "href": "https://www.ieeemadc.org/", "external": true },
+          { "label": "Student Ethics", "href": "https://www.ieee.org/about/ethics/competition.html", "external": true }
+        ]
+      }
+    ]
+  }
+}

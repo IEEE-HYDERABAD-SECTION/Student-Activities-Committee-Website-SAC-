@@ -1,0 +1,26 @@
+{
+  "title": "IEEE Hyderabad SAC",
+  "tagline": "Empowering Student Branches Across Hyderabad Section",
+  "description": "The Student Activities Committee of the IEEE Hyderabad Section coordinates student branch development, leadership programs, technical competitions, and humanitarian activities across the region.",
+  "url": "https://sac.ieeehyd.org",
+  "contact_email": "sac@ieeehyderabad.org",
+  "hero": {
+    "eyebrow": "IEEE Hyderabad Section",
+    "title": "Student Activities Committee",
+    "subtitle": "Building the next generation of engineers through leadership, technical excellence, and community impact.",
+    "primary_cta": { "label": "Explore Events", "href": "/events/" },
+    "secondary_cta": { "label": "Join IEEE", "href": "/membership-benefits/" }
+  },
+  "announcement": {
+    "enabled": false,
+    "text": "",
+    "link": ""
+  },
+  "stats": [
+    { "value": "150+", "label": "Student Branches" },
+    { "value": "1,400+", "label": "Student Members" },
+    { "value": "70+", "label": "SN Team Members" },
+    { "value": "16", "label": "Events in 2026" }
+  ],
+  "featured_event_slug": ""
+}
