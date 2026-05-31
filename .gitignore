@@ -1,3 +1,6 @@
+# Eleventy build output
+_site/
+
 # Dependencies
 node_modules/
 npm-debug.log*
