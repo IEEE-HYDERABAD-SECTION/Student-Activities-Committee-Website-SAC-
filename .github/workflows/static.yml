@@ -36,6 +36,11 @@ jobs:
       - name: Build with Eleventy
         run: npm run build
 
+      - name: Copy static assets
+        run: |
+          cp -a css js images assets admin data ID archive resources sheets banner ssc2021 report fonts vendor sb_images _site/
+          cp -a CNAME .htaccess _site/
+
       - name: Verify production assets
         run: |
           set -u
