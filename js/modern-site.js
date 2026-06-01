@@ -1,4 +1,4 @@
-// IEEE SAC modern site — small enhancers, no framework.
+// IEEE SAC modern site - small enhancers, no framework.
 
 (function () {
   "use strict";
@@ -57,7 +57,7 @@
   }
 
   // ---------- Reveal on scroll (IntersectionObserver) ----------
-  // js-ready class enables opacity-0 in CSS — content is always visible without JS.
+  // js-ready class enables opacity-0 in CSS - content is always visible without JS.
   document.documentElement.classList.add("js-ready");
 
   if ("IntersectionObserver" in window) {

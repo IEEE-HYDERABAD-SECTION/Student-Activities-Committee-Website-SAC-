@@ -1,5 +1,5 @@
 /* ============================================================================
-   IEEE Hyderabad SAC — Modern Design System (2026)
+   IEEE Hyderabad SAC - Modern Design System (2026)
    Tokens-first, no framework dependencies. Dark-mode aware.
    ============================================================================ */
 
@@ -39,7 +39,7 @@
   --fs-2xl: clamp(2.25rem, 1.7rem + 2.6vw, 3.75rem);
   --fs-3xl: clamp(2.75rem, 2rem + 3.6vw, 4.75rem);
 
-  /* Spacing — 8pt scale */
+  /* Spacing - 8pt scale */
   --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem;
   --s-5: 1.5rem; --s-6: 2rem; --s-7: 3rem; --s-8: 4rem;
   --s-9: 6rem; --s-10: 8rem;
@@ -65,7 +65,7 @@
 
   --container: 1200px;
 
-  /* Footer always uses a fixed dark surface — never flips in dark mode */
+  /* Footer always uses a fixed dark surface - never flips in dark mode */
   --footer-bg: #060f1f;
   --footer-text: rgba(255, 255, 255, 0.72);
   --footer-heading: #ffffff;
@@ -345,8 +345,32 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
 .hero h1 { font-size: var(--fs-3xl); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-5); }
-.hero-visual { position: relative; aspect-ratio: 1 / 1; max-width: 480px; margin-inline: auto; }
-.hero-visual img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 30px 40px rgba(0, 98, 155, 0.18)); }
+.hero-visual { position: relative; max-width: 520px; margin-inline: auto; }
+
+/* Hero photo */
+.hero-photo-wrap {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.22), 0 0 0 1px var(--line);
+}
+.hero-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+
+/* Hero stat badges - fallback when no hero image is set */
+.hero-badge-cluster { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); max-width: 420px; margin-inline: auto; }
+.hero-badge {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  text-align: center;
+  box-shadow: var(--sh-2);
+  display: flex; flex-direction: column; gap: var(--s-1);
+}
+.hero-badge--accent { background: var(--ieee-blue); border-color: var(--ieee-blue); }
+.hero-badge--accent .hero-badge-value,
+.hero-badge--accent .hero-badge-label { color: white; }
+.hero-badge-value { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 800; color: var(--ieee-blue); line-height: 1; }
+.hero-badge-label { font-size: var(--fs-xs); color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.06em; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--s-5); margin-top: var(--s-7); }
 .stat { text-align: center; padding: var(--s-4); border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
@@ -373,8 +397,8 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--s-2); font-size: var(--fs-sm); }
 .footer-logos { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-4); }
-.footer-logo-main { height: 56px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
-.footer-logo-sn { height: 48px; width: 48px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.85; border-radius: 50%; }
+.footer-logo-main { height: 44px; width: auto; opacity: 0.9; }
+.footer-logo-sn { height: 40px; width: 40px; object-fit: contain; opacity: 0.92; border-radius: 50%; }
 .footer-tagline { font-size: var(--fs-sm); color: rgba(255,255,255,0.55); margin: 0 0 var(--s-4); }
 .footer-social { display: flex; gap: var(--s-3); margin-top: var(--s-4); }
 .footer-social a {
@@ -400,7 +424,7 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 .team-role { color: var(--ieee-blue); font-size: var(--fs-sm); font-weight: 600; margin: 0 0 var(--s-1); }
 .team-org { color: var(--ink-mute); font-size: var(--fs-xs); margin: 0; }
 
-/* ---------- Motion (reveal) — progressive enhancement ---------- */
+/* ---------- Motion (reveal) - progressive enhancement ---------- */
 /* Elements are visible by default; JS adds .js-ready to <html> to enable animations */
 .reveal { transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
 html.js-ready .reveal { opacity: 0; transform: translateY(20px); }
