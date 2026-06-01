@@ -1,9 +1,9 @@
-{# Render one event card. Expects: event = {title, date, venue, mode, poster, description, register_url, status} #}
+{# Render one event card. Expects: event = {title, date, venue, mode, poster, description, register_url, slug, status} #}
 <article class="card reveal">
   {% if event.poster %}
-    <div class="card-image">
+    <a href="/events/{{ event.slug }}/" class="card-image" style="display: block">
       <img src="{{ event.poster }}" alt="{{ event.title }} poster" loading="lazy" />
-    </div>
+    </a>
   {% endif %}
   <div class="card-body">
     <div class="flex" style="justify-content: space-between; align-items: center; gap: var(--s-3)">
@@ -12,7 +12,7 @@
       </span>
       {% if event.mode %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ event.mode }}</span>{% endif %}
     </div>
-    <h3>{{ event.title }}</h3>
+    <h3><a href="/events/{{ event.slug }}/" style="color: inherit; text-decoration: none">{{ event.title }}</a></h3>
     <div class="card-meta">
       {% if event.date %}
         <span>
@@ -28,13 +28,9 @@
       {% endif %}
     </div>
     {% if event.description %}<p style="margin: 0; font-size: var(--fs-sm)">{{ event.description | truncate(140) }}</p>{% endif %}
-    {% if event.register_url and event.status != "past" %}
-      <a class="btn btn-primary btn-sm" href="{{ event.register_url }}" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">
-        Register
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-    {% elif event.register_url %}
-      <a class="btn btn-ghost btn-sm" href="{{ event.register_url }}" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">View details</a>
-    {% endif %}
+    <a class="btn {% if event.status != 'past' %}btn-primary{% else %}btn-ghost{% endif %} btn-sm" href="/events/{{ event.slug }}/" style="align-self: flex-start; margin-top: auto">
+      {% if event.status != "past" %}Register & Details{% else %}View Details{% endif %}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
   </div>
 </article>
