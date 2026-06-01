@@ -1,4 +1,4 @@
-# IEEE Hyderabad Section — Student Activities Committee Website
+# IEEE Hyderabad Section - Student Activities Committee Website
 
 Official website of the IEEE Hyderabad Section Student Activities Committee, live at **[sac.ieeehyd.org](https://sac.ieeehyd.org)**.
 
@@ -13,7 +13,7 @@ Official website of the IEEE Hyderabad Section Student Activities Committee, liv
 | CMS | [Decap CMS v3](https://decapcms.org/) at `/admin/` |
 | Auth proxy | Cloudflare Worker ([sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth)) |
 | Hosting | GitHub Pages via GitHub Actions |
-| CSS | Custom design system (`css/modern.css`) — no Bootstrap |
+| CSS | Custom design system (`css/modern.css`) - no Bootstrap |
 
 ---
 
@@ -39,9 +39,9 @@ npm run build
 ## Project Structure
 
 ```
-├── src/                    # Eleventy source — all pages as .njk templates
+├── src/                    # Eleventy source - all pages as .njk templates
 │   ├── _includes/
-│   │   ├── layouts/        # base.njk — shared HTML shell (head, nav, footer)
+│   │   ├── layouts/        # base.njk - shared HTML shell (head, nav, footer)
 │   │   └── partials/       # header, footer, event-card partials
 │   └── _data/              # JS data loaders (events.js, global.js)
 ├── data/                   # CMS-managed content (JSON files, edited via /admin/)
@@ -61,7 +61,7 @@ npm run build
 │   └── import-vtools.mjs   # One-time importer for IEEE vTools event pages
 ├── .eleventy.js            # Eleventy configuration
 └── .github/workflows/
-    └── static.yml          # GitHub Actions — builds and deploys to GitHub Pages
+    └── static.yml          # GitHub Actions - builds and deploys to GitHub Pages
 ```
 
 ---
@@ -74,11 +74,11 @@ Login requires a GitHub account with write access to this repository. See [CONTR
 
 **What you can edit in the CMS:**
 
-- **Events** — add new events, upload posters, set dates/venues
-- **Event Reports** — upload PDF reports and photo galleries
-- **SN Team** — update 2025-26 member roster and photos
-- **SAC Core Team** — update 2026-27 executive committee
-- **Homepage** — change hero title, subtitle, hero image, announcement bar, stats
+- **Events** - add new events, upload posters, set dates/venues
+- **Event Reports** - upload PDF reports and photo galleries
+- **SN Team** - update 2025-26 member roster and photos
+- **SAC Core Team** - update 2026-27 executive committee
+- **Homepage** - change hero title, subtitle, hero image, announcement bar, stats
 
 CMS edits create a pull request (editorial workflow). A team admin merges the PR, and the site rebuilds automatically in ~60 seconds.
 
@@ -114,6 +114,6 @@ The site is served at `sac.ieeehyd.org` via the `CNAME` file.
 
 ## Contributing
 
-- **Content edits** — use the CMS at `/admin/`
-- **Code changes** — open a pull request against `main`
-- **Team photos / logos** — place in `images/` and reference in the relevant JSON file in `data/team/`
+- **Content edits** - use the CMS at `/admin/`
+- **Code changes** - open a pull request against `main`
+- **Team photos / logos** - place in `images/` and reference in the relevant JSON file in `data/team/`

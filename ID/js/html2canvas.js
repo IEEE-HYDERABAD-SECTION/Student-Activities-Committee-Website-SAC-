@@ -763,7 +763,7 @@
     if (isAdjacentWithSpaceIgnored([CL, CP], NS, currentIndex, classTypes)) {
       return BREAK_NOT_ALLOWED$1;
     }
-    // LB17 Do not break within ‘——’, even with intervening spaces.
+    // LB17 Do not break within ‘--’, even with intervening spaces.
     if (isAdjacentWithSpaceIgnored(B2, B2, currentIndex, classTypes)) {
       return BREAK_NOT_ALLOWED$1;
     }
