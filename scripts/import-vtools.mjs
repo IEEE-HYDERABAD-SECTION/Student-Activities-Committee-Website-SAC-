@@ -111,7 +111,7 @@ async function importOne(id) {
     await writeFile(outPath, JSON.stringify(event, null, 2) + "\n", "utf8");
     console.log(`wrote ${slug}.json`);
   } catch (err) {
-    console.log(`FAILED — ${err.message}`);
+    console.log(`FAILED - ${err.message}`);
   }
 }
 
