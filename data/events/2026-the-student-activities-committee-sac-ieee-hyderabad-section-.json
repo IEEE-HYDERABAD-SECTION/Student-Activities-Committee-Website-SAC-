@@ -1,13 +1,14 @@
 {
-  "mode": "in-person",
+  "mode": "hybrid",
   "slug": "2026-the-student-activities-committee-sac-ieee-hyderabad-section-",
-  "poster": "",
+  "poster": "/assets/events/ev-1.jpeg",
   "featured": false,
   "date": "2026-02-12T10:00:00.000+05:30",
-  "venue": "",
+  "venue": "VNRVJIET ",
+  "end_date": "2026-02-12T13:00:00.000+05:30",
   "register_url": "https://events.vtools.ieee.org/m/538749",
   "vtools_id": "538749",
   "title": "The Student Activities Committee (SAC), IEEE Hyderabad Section, in collaboration with UTS and the IEEE VNRVJIET IES & SPS Chapters, is organizing a Unified Technical Hybrid Workshop.",
   "tags": [],
-  "description": "IEEE vTools Events is used for managing IEEE conferences and meetings. \nEvents are showcased in IEEE Collabratec™ and can be promoted on websites and eNotices."
+  "description": "The Student Activities Committee (SAC), IEEE Hyderabad Section, in collaboration with UTS and the IEEE VNRVJIET IES & SPS Chapters, is organizing a Unified Technical Hybrid Workshop.\n\nThursday, 12 February 2026\nVenue: VNR Vignana Jyothi Institute of Engineering & Technology B214 (Hybrid Mode)\n\nTopic: QA/QC Hardware Testing, PCB Basics & BOM Engineering\nSpeaker: Dr. M. Vishnu Prasad\nDr. M. Vishnu Prasad is the Strategic HR Division Head at Unistring Tech Solutions, where he leads initiatives to align talent acquisition, capability building, and training with organizational growth and long-term strategic priorities. He holds a Doctor of Philosophy (Ph.D.) in Electrical Engineering from National Institute of Technology Warangal.\nAn accomplished academician and industry professional, Dr. Vishnu brings over 14 years of combined experience, including 10 years in research and academia and 4 years in industrial practice. As a keynote speaker, he offers a balanced perspective that bridges theory and practice, sharing insights on how strong research foundations, disciplined engineering methodologies, and real-world industry exposure together enable the development of robust, scalable, and application-ready engineering solutions.\n\nDay 1 of the Unified Technical Hybrid Workshop focuses on industry-oriented hardware engineering skills, providing participants with practical insights into quality assurance, quality control, PCB fundamentals, and bill of materials (BOM) engineering. The session is designed to bridge the gap between academic knowledge and real-world industry practices, enabling students to understand testing methodologies, design considerations, and production-level workflows.\n\nThis interactive hybrid session offers hands-on learning, expert guidance, and real-time industry exposure, making it highly beneficial for students aspiring to build careers in hardware design, testing, and manufacturing domains."
 }
