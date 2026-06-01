@@ -1,10 +1,10 @@
-// Eleventy config — IEEE Hyderabad SAC site
+// Eleventy config - IEEE Hyderabad SAC site
 // Input: src/  Output: _site/
 // Pass-through copy preserves the existing repo layout (images, PDFs, legacy ID/ PHP folder, etc.)
 // so deploys to GitHub Pages stay drop-in compatible while new pages migrate to Nunjucks templates.
 
 module.exports = function (eleventyConfig) {
-  // Static assets — copied verbatim into _site
+  // Static assets - copied verbatim into _site
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sheets");
   eleventyConfig.addPassthroughCopy("banner");
   eleventyConfig.addPassthroughCopy("ssc2021");
+  eleventyConfig.addPassthroughCopy("report");
+  eleventyConfig.addPassthroughCopy("fonts");
+  eleventyConfig.addPassthroughCopy("vendor");
+  eleventyConfig.addPassthroughCopy("sb_images");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy(".htaccess");
   eleventyConfig.addPassthroughCopy("*.pdf");
@@ -28,12 +32,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.webp");
   eleventyConfig.addPassthroughCopy("*.xlsx");
 
+  // Archive HTML files use relative paths (images/, js/) that now resolve from /archive/
+  // Mirror the needed directories so archived pages don't 404 on their assets
+  eleventyConfig.addPassthroughCopy({ "images": "archive/images" });
+  eleventyConfig.addPassthroughCopy({ "js": "archive/js" });
+
   // Watch design system + data
   eleventyConfig.addWatchTarget("css/");
   eleventyConfig.addWatchTarget("js/");
   eleventyConfig.addWatchTarget("data/");
 
-  // Date filter — display dates nicely from ISO strings
+  // Date filter - display dates nicely from ISO strings
   eleventyConfig.addFilter("displayDate", (iso) => {
     if (!iso) return "";
     const d = new Date(iso);
@@ -54,7 +63,7 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Status helpers — derived, not stored, so editors can't get them wrong
+  // Status helpers - derived, not stored, so editors can't get them wrong
   eleventyConfig.addFilter("isPast", (iso) => {
     if (!iso) return false;
     return new Date(iso).getTime() < Date.now();
