@@ -38,10 +38,29 @@ jobs:
 
       - name: Verify production assets
         run: |
-          test -f _site/images/SN_Logo_Circular.png
-          test -f _site/images/ieee-hyderabad-sac-logo.png
-          test -f _site/images/hero.png
-          test -f _site/js/modern-site.js
+          set -u
+          missing=0
+          for file in \
+            _site/images/SN_Logo_Circular.png \
+            _site/images/ieee-hyderabad-sac-logo.png \
+            _site/images/hero.png \
+            _site/js/modern-site.js
+          do
+            if [ -f "$file" ]; then
+              echo "found: $file"
+            else
+              echo "missing: $file"
+              missing=1
+            fi
+          done
+
+          echo "Top-level _site/images files:"
+          find _site/images -maxdepth 1 -type f | sort | head -50 || true
+
+          echo "Top-level _site/js files:"
+          find _site/js -maxdepth 1 -type f | sort || true
+
+          exit "$missing"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
