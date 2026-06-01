@@ -8,6 +8,7 @@
     "eyebrow": "IEEE Hyderabad Section",
     "title": "Student Activities Committee",
     "subtitle": "Building the next generation of engineers through leadership, technical excellence, and community impact.",
+    "image": "/images/hero.png",
     "primary_cta": { "label": "Explore Events", "href": "/events/" },
     "secondary_cta": { "label": "Join IEEE", "href": "/membership-benefits/" }
   },
@@ -19,7 +20,7 @@
   "stats": [
     { "value": "150+", "label": "Student Branches" },
     { "value": "1,400+", "label": "Student Members" },
-    { "value": "70+", "label": "SN Team Members" },
+    { "value": "28+", "label": "SN Team Members" },
     { "value": "16", "label": "Events in 2026" }
   ],
   "featured_event_slug": ""

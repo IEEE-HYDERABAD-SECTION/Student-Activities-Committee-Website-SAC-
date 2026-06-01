@@ -25,7 +25,30 @@ eleventyNavigation:
         </div>
       </div>
       <div class="hero-visual reveal">
-        <img src="{{ nav.brand.secondary_logo }}" alt="{{ nav.brand.secondary_alt }}" />
+        {% if site.hero.image %}
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="{{ site.hero.image }}" alt="IEEE Hyderabad SAC" loading="eager" />
+          </div>
+        {% else %}
+          <div class="hero-badge-cluster">
+            <div class="hero-badge">
+              <span class="hero-badge-value">150+</span>
+              <span class="hero-badge-label">Student Branches</span>
+            </div>
+            <div class="hero-badge hero-badge--accent">
+              <span class="hero-badge-value">16</span>
+              <span class="hero-badge-label">Events in 2026</span>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-value">1,400+</span>
+              <span class="hero-badge-label">IEEE Student Members</span>
+            </div>
+            <div class="hero-badge hero-badge--accent">
+              <span class="hero-badge-value">28</span>
+              <span class="hero-badge-label">SN Team Members</span>
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
 

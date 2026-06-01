@@ -1,4 +1,4 @@
-# Decap CMS configuration — IEEE Hyderabad SAC
+# Decap CMS configuration - IEEE Hyderabad SAC
 #
 # BACKEND SETUP (one-time, for the maintainer):
 #   1. Create a GitHub OAuth App at https://github.com/settings/developers
@@ -12,11 +12,11 @@
 
 backend:
   name: github
-  repo: IEEE-HYDERABAD-SECTION/Student-Activities-Committee-Website-SAC- # TODO: set to actual <org>/<repo>
+  repo: IEEE-HYDERABAD-SECTION/Student-Activities-Committee-Website-SAC-
   branch: main
   base_url: https://ieee-sac-auth.matrix2.workers.dev
 
-publish_mode: editorial_workflow # creates PRs instead of direct commits — safer for non-tech editors
+publish_mode: editorial_workflow # creates PRs instead of direct commits - safer for non-tech editors
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
@@ -27,7 +27,7 @@ logo_url: /images/ieee-hyderabad-sac-logo.png
 
 collections:
   # ---------------------------------------------------------------------------
-  # EVENTS — one JSON file per event in /data/events/
+  # EVENTS - one JSON file per event in /data/events/
   # ---------------------------------------------------------------------------
   - name: events
     label: "Events"
@@ -38,7 +38,7 @@ collections:
     slug: "{{year}}-{{slug}}"
     extension: json
     format: json
-    summary: "{{title}} — {{date | date('DD MMM YYYY')}}"
+    summary: "{{title}} - {{date | date('DD MMM YYYY')}}"
     sortable_fields: [date, title]
     view_filters:
       - label: "Upcoming"
@@ -62,7 +62,7 @@ collections:
       - { label: "Tags", name: tags, widget: list, required: false, default: [] }
 
   # ---------------------------------------------------------------------------
-  # EVENT REPORTS — PDFs + summaries
+  # EVENT REPORTS - PDFs + summaries
   # ---------------------------------------------------------------------------
   - name: reports
     label: "Event Reports"
@@ -87,7 +87,7 @@ collections:
         field: { label: "Photo", name: photo, widget: image, media_folder: "/assets/reports", public_folder: "/assets/reports" }
 
   # ---------------------------------------------------------------------------
-  # SN TEAM — single JSON file per year, list of members
+  # SN TEAM - single JSON file per year, list of members
   # ---------------------------------------------------------------------------
   - name: sn_team
     label: "SN Team"
@@ -132,7 +132,7 @@ collections:
               - { label: "LinkedIn", name: linkedin, widget: string, required: false }
 
   # ---------------------------------------------------------------------------
-  # HOMEPAGE / SITE SETTINGS — hero, announcements, stats
+  # HOMEPAGE / SITE SETTINGS - hero, announcements, stats
   # ---------------------------------------------------------------------------
   - name: site
     label: "Homepage & Site Settings"
@@ -153,6 +153,7 @@ collections:
               - { label: "Eyebrow Text", name: eyebrow, widget: string }
               - { label: "Hero Title", name: title, widget: string }
               - { label: "Hero Subtitle", name: subtitle, widget: text }
+              - { label: "Hero Image", name: image, widget: image, required: false, media_folder: "/images", public_folder: "/images", hint: "Group photo or event banner shown on the right side of the homepage hero" }
               - label: "Primary CTA"
                 name: primary_cta
                 widget: object
