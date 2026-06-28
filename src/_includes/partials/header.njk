@@ -25,7 +25,9 @@
                     <h5>{{ col.heading }}</h5>
                     <ul>
                       {% for link in col.links %}
-                        <li><a href="{{ link.href }}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+                        {% if not link.hidden %}
+                          <li><a href="{{ link.href }}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+                        {% endif %}
                       {% endfor %}
                     </ul>
                   </div>
@@ -63,7 +65,9 @@
               <h5>{{ col.heading }}</h5>
               <ul>
                 {% for link in col.links %}
-                  <li><a href="{{ link.href }}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+                  {% if not link.hidden %}
+                    <li><a href="{{ link.href }}"{% if link.external %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {% endfor %}

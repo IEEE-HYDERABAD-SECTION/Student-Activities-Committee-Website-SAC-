@@ -69,6 +69,40 @@ layout: layouts/base.njk
       </div>
     {% endif %}
 
+    {% if event.images and event.images.length %}
+      <section class="event-gallery reveal" aria-labelledby="event-gallery-title">
+        <div class="event-gallery-head">
+          <div>
+            <span class="eyebrow">Event Photos</span>
+            <h2 id="event-gallery-title">Moments from this event</h2>
+          </div>
+          {% if event.images.length > 1 %}
+            <div class="carousel-controls">
+              <button type="button" class="carousel-button" data-carousel-prev aria-label="Previous event photo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+              </button>
+              <button type="button" class="carousel-button" data-carousel-next aria-label="Next event photo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel-track" data-carousel-track>
+            {% for image in event.images %}
+              <figure class="carousel-slide">
+                <img src="{{ image.src or image }}" alt="{{ image.alt or event.title }}" loading="lazy" />
+                {% if image.caption %}
+                  <figcaption>{{ image.caption }}</figcaption>
+                {% endif %}
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+
     <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-3)">
       {% if event.register_url and event.status != "past" %}
         <a class="btn btn-primary" href="{{ event.register_url }}" target="_blank" rel="noopener">

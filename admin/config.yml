@@ -60,6 +60,15 @@ collections:
       - { label: "vTools Event ID", name: vtools_id, widget: string, required: false, hint: "Number from the vTools URL, e.g. 538749" }
       - { label: "Feature on Homepage?", name: featured, widget: boolean, default: false }
       - { label: "Tags", name: tags, widget: list, required: false, default: [] }
+      - label: "Event Photos"
+        name: images
+        widget: list
+        required: false
+        hint: "These appear in the carousel on the event detail page. This is separate from the poster/banner image."
+        fields:
+          - { label: "Photo", name: src, widget: image, media_folder: "/assets/events", public_folder: "/assets/events" }
+          - { label: "Alt Text", name: alt, widget: string, required: false }
+          - { label: "Caption", name: caption, widget: string, required: false }
 
   # ---------------------------------------------------------------------------
   # EVENT REPORTS - PDFs + summaries
@@ -85,6 +94,29 @@ collections:
         widget: list
         required: false
         field: { label: "Photo", name: photo, widget: image, media_folder: "/assets/reports", public_folder: "/assets/reports" }
+
+  # ---------------------------------------------------------------------------
+  # PHOTO GALLERY - public gallery page
+  # ---------------------------------------------------------------------------
+  - name: gallery
+    label: "Photo Gallery"
+    files:
+      - file: data/gallery.json
+        label: "Gallery Photos"
+        name: gallery_photos
+        fields:
+          - label: "Year Groups"
+            name: groups
+            widget: list
+            fields:
+              - { label: "Year / Section Title", name: year, widget: string }
+              - label: "Photos"
+                name: photos
+                widget: list
+                fields:
+                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+                  - { label: "Alt Text", name: alt, widget: string, required: false }
+                  - { label: "Caption", name: caption, widget: string, required: false }
 
   # ---------------------------------------------------------------------------
   # SN TEAM - single JSON file per year, list of members

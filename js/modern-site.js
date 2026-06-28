@@ -91,4 +91,21 @@
       document.querySelectorAll(".nav-primary > li > button.nav-link[aria-expanded='true']").forEach((o) => o.setAttribute("aria-expanded", "false"));
     }
   });
+
+  // ---------- Lightweight carousels ----------
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector("[data-carousel-track]");
+    const section = carousel.closest(".event-gallery") || carousel.parentElement;
+    const prev = section ? section.querySelector("[data-carousel-prev]") : null;
+    const next = section ? section.querySelector("[data-carousel-next]") : null;
+    if (!track) return;
+
+    function move(direction) {
+      const distance = track.clientWidth * direction;
+      track.scrollBy({ left: distance, behavior: "smooth" });
+    }
+
+    if (prev) prev.addEventListener("click", () => move(-1));
+    if (next) next.addEventListener("click", () => move(1));
+  });
 })();

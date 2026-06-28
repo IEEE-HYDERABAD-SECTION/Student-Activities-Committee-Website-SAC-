@@ -1,0 +1,61 @@
+{
+  "groups": [
+    {
+      "year": "2022",
+      "photos": [
+        {
+          "src": "/images/kmm rao sir pic .png",
+          "alt": "IEEE SAC 2022 event"
+        },
+        {
+          "src": "/images/kmm rao sir pic 1 .png",
+          "alt": "IEEE SAC 2022 event"
+        },
+        {
+          "src": "/images/Snapchat-1715262722.jpg",
+          "alt": "IEEE SAC 2022"
+        },
+        {
+          "src": "/images/WhatsApp Image 2022-09-26 at 9.08.22 AM (1).jpeg",
+          "alt": "IEEE SAC 2022"
+        },
+        {
+          "src": "/images/WhatsApp Image 2022-10-02 at 7.55.41 PM.jpeg",
+          "alt": "IEEE SAC 2022"
+        }
+      ]
+    },
+    {
+      "year": "2021",
+      "photos": [
+        {
+          "src": "/images/prashanth_all.jpg",
+          "alt": "IEEE SAC 2021",
+          "caption": "27th August, 2021"
+        },
+        {
+          "src": "/images/r10_award_2_prashanth.jpg",
+          "alt": "IEEE Region 10 Educational Activities Outstanding Volunteer Award 2021",
+          "caption": "IEEE R10 Educational Activities Outstanding Volunteer Award 2021"
+        },
+        {
+          "src": "/images/r10_award_prashanth.jpg",
+          "alt": "IEEE Region 10 SAC Outstanding Volunteer Award 2021",
+          "caption": "IEEE R10 SAC Outstanding Volunteer Award 2021"
+        },
+        {
+          "src": "/archive/legacy-images/IMG_7653.JPG",
+          "alt": "IEEE SAC 2021"
+        },
+        {
+          "src": "/archive/legacy-images/IMG_8980.JPG",
+          "alt": "IEEE SAC 2021"
+        },
+        {
+          "src": "/archive/legacy-images/IMG_9043.JPG",
+          "alt": "IEEE SAC 2021"
+        }
+      ]
+    }
+  ]
+}

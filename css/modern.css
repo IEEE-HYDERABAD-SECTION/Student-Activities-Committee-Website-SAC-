@@ -424,6 +424,122 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 .team-role { color: var(--ieee-blue); font-size: var(--fs-sm); font-weight: 600; margin: 0 0 var(--s-1); }
 .team-org { color: var(--ink-mute); font-size: var(--fs-xs); margin: 0; }
 
+/* ---------- Gallery / carousel ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--s-4);
+}
+.gallery-item {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-alt);
+  position: relative;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--s-3) var(--s-4);
+  background: linear-gradient(transparent, rgba(11, 31, 58, 0.85));
+  color: white;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease);
+}
+.gallery-item:hover .gallery-caption { opacity: 1; }
+.event-gallery {
+  margin-bottom: var(--s-7);
+  padding-top: var(--s-2);
+}
+.event-gallery-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+.event-gallery-head h2 {
+  font-size: var(--fs-lg);
+  margin-bottom: 0;
+}
+.event-gallery-head .eyebrow { margin-bottom: var(--s-2); }
+.carousel {
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  background: var(--surface-alt);
+  border: 1px solid var(--line);
+  box-shadow: var(--sh-2);
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0;
+  scroll-snap-align: start;
+  position: relative;
+  background: var(--surface-alt);
+}
+.carousel-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 520px;
+  object-fit: cover;
+}
+.carousel-slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--s-5);
+  color: white;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  background: linear-gradient(transparent, rgba(11, 31, 58, 0.82));
+}
+.carousel-controls {
+  display: flex;
+  gap: var(--s-2);
+}
+.carousel-button {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.carousel-button:hover {
+  border-color: var(--ieee-blue);
+  color: var(--ieee-blue);
+  transform: translateY(-1px);
+}
+@media (max-width: 620px) {
+  .event-gallery-head { align-items: flex-start; }
+  .carousel-slide img { aspect-ratio: 4 / 3; }
+}
+
 /* ---------- Motion (reveal) - progressive enhancement ---------- */
 /* Elements are visible by default; JS adds .js-ready to <html> to enable animations */
 .reveal { transition: opacity 600ms var(--ease), transform 600ms var(--ease); }

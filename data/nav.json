@@ -18,7 +18,7 @@
             { "label": "About SAC", "href": "/about-sac/" },
             { "label": "SAC ExeCom", "href": "/sac-core-team/" },
             { "label": "SN Team", "href": "/sn-team/" },
-            { "label": "Student Branch Details", "href": "/student-branch-details/" },
+            { "label": "Student Branch Details", "href": "/student-branch-details/", "hidden": true },
             { "label": "Chapters & Affinity Groups", "href": "/chapter-affinity/" }
           ]
         },
