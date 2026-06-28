@@ -54,7 +54,7 @@ collections:
         widget: select
         options: ["in-person", "online", "hybrid"]
         default: "in-person"
-      - { label: "Poster Image", name: poster, widget: image, required: false, media_folder: "/assets/events", public_folder: "/assets/events" }
+      - { label: "Poster Image", name: poster, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
       - { label: "Short Description", name: description, widget: text, required: false }
       - label: "Event Content"
         name: content
@@ -68,7 +68,7 @@ collections:
             options: ["text", "heading", "image"]
             default: "text"
           - { label: "Text / Heading", name: text, widget: text, required: false }
-          - { label: "Image", name: src, widget: image, required: false, media_folder: "/assets/events", public_folder: "/assets/events" }
+          - { label: "Image", name: src, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
           - { label: "Image Alt Text", name: alt, widget: string, required: false }
           - { label: "Image Caption", name: caption, widget: string, required: false }
       - { label: "Registration / Details URL", name: register_url, widget: string, required: false }
@@ -81,7 +81,7 @@ collections:
         required: false
         hint: "Optional simple photo grid shown after the event content. For exact placement between paragraphs, use Event Content image blocks above."
         fields:
-          - { label: "Photo", name: src, widget: image, media_folder: "/assets/events", public_folder: "/assets/events" }
+          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
           - { label: "Alt Text", name: alt, widget: string, required: false }
           - { label: "Caption", name: caption, widget: string, required: false }
 
@@ -108,7 +108,7 @@ collections:
         name: photos
         widget: list
         required: false
-        field: { label: "Photo", name: photo, widget: image, media_folder: "/assets/reports", public_folder: "/assets/reports" }
+        field: { label: "Photo", name: photo, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
 
   # ---------------------------------------------------------------------------
   # PHOTO GALLERY - public gallery page
@@ -131,7 +131,7 @@ collections:
                 widget: list
                 summary: "{{fields.alt}}"
                 fields:
-                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/gallery", public_folder: "/assets/gallery" }
+                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
                   - { label: "Alt Text", name: alt, widget: string, required: false }
                   - { label: "Caption", name: caption, widget: string, required: false }
 
@@ -155,7 +155,7 @@ collections:
               - { label: "Full Name", name: name, widget: string }
               - { label: "Role / Designation", name: role, widget: string }
               - { label: "Institution", name: institution, widget: string, required: false }
-              - { label: "Photo", name: photo, widget: image, media_folder: "/images/SN_TEAM_2025-26", public_folder: "/images/SN_TEAM_2025-26" }
+              - { label: "Photo", name: photo, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
               - { label: "Email", name: email, widget: string, required: false }
               - { label: "LinkedIn", name: linkedin, widget: string, required: false }
 
@@ -176,7 +176,7 @@ collections:
               - { label: "Full Name", name: name, widget: string }
               - { label: "Role", name: role, widget: string }
               - { label: "Institution", name: institution, widget: string, required: false }
-              - { label: "Photo", name: photo, widget: image, media_folder: "/images/core-team", public_folder: "/images/core-team" }
+              - { label: "Photo", name: photo, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
               - { label: "Email", name: email, widget: string, required: false }
               - { label: "LinkedIn", name: linkedin, widget: string, required: false }
 
@@ -202,14 +202,14 @@ collections:
               - { label: "Eyebrow Text", name: eyebrow, widget: string }
               - { label: "Hero Title", name: title, widget: string }
               - { label: "Hero Subtitle", name: subtitle, widget: text }
-              - { label: "Hero Image", name: image, widget: image, required: false, media_folder: "/images", public_folder: "/images", hint: "Group photo or event banner shown on the right side of the homepage hero" }
+              - { label: "Hero Image", name: image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Group photo or event banner shown on the right side of the homepage hero" }
               - label: "Homepage Carousel Images"
                 name: carousel
                 widget: list
                 required: false
                 hint: "These appear as the carousel on the homepage hero. If empty, Hero Image is used."
                 fields:
-                  - { label: "Photo", name: src, widget: image, media_folder: "/images", public_folder: "/images" }
+                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
                   - { label: "Alt Text", name: alt, widget: string, required: false }
                   - { label: "Caption", name: caption, widget: string, required: false }
               - label: "Primary CTA"
