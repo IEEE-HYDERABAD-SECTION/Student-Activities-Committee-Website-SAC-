@@ -123,13 +123,15 @@ collections:
           - label: "Year Groups"
             name: groups
             widget: list
+            summary: "{{fields.year}}"
             fields:
               - { label: "Year / Section Title", name: year, widget: string }
               - label: "Photos"
                 name: photos
                 widget: list
+                summary: "{{fields.alt}}"
                 fields:
-                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+                  - { label: "Photo", name: src, widget: image, media_folder: "/assets/gallery", public_folder: "/assets/gallery" }
                   - { label: "Alt Text", name: alt, widget: string, required: false }
                   - { label: "Caption", name: caption, widget: string, required: false }
 
