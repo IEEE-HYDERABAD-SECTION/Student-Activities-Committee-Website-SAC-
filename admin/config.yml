@@ -56,6 +56,21 @@ collections:
         default: "in-person"
       - { label: "Poster Image", name: poster, widget: image, required: false, media_folder: "/assets/events", public_folder: "/assets/events" }
       - { label: "Short Description", name: description, widget: text, required: false }
+      - label: "Event Content"
+        name: content
+        widget: list
+        required: false
+        hint: "Add ordered content blocks here. Use image blocks to place photos between text wherever needed on the event detail page."
+        fields:
+          - label: "Block Type"
+            name: type
+            widget: select
+            options: ["text", "heading", "image"]
+            default: "text"
+          - { label: "Text / Heading", name: text, widget: text, required: false }
+          - { label: "Image", name: src, widget: image, required: false, media_folder: "/assets/events", public_folder: "/assets/events" }
+          - { label: "Image Alt Text", name: alt, widget: string, required: false }
+          - { label: "Image Caption", name: caption, widget: string, required: false }
       - { label: "Registration / Details URL", name: register_url, widget: string, required: false }
       - { label: "vTools Event ID", name: vtools_id, widget: string, required: false, hint: "Number from the vTools URL, e.g. 538749" }
       - { label: "Feature on Homepage?", name: featured, widget: boolean, default: false }
@@ -64,7 +79,7 @@ collections:
         name: images
         widget: list
         required: false
-        hint: "These appear in the carousel on the event detail page. This is separate from the poster/banner image."
+        hint: "Optional simple photo grid shown after the event content. For exact placement between paragraphs, use Event Content image blocks above."
         fields:
           - { label: "Photo", name: src, widget: image, media_folder: "/assets/events", public_folder: "/assets/events" }
           - { label: "Alt Text", name: alt, widget: string, required: false }
@@ -186,6 +201,15 @@ collections:
               - { label: "Hero Title", name: title, widget: string }
               - { label: "Hero Subtitle", name: subtitle, widget: text }
               - { label: "Hero Image", name: image, widget: image, required: false, media_folder: "/images", public_folder: "/images", hint: "Group photo or event banner shown on the right side of the homepage hero" }
+              - label: "Homepage Carousel Images"
+                name: carousel
+                widget: list
+                required: false
+                hint: "These appear as the carousel on the homepage hero. If empty, Hero Image is used."
+                fields:
+                  - { label: "Photo", name: src, widget: image, media_folder: "/images", public_folder: "/images" }
+                  - { label: "Alt Text", name: alt, widget: string, required: false }
+                  - { label: "Caption", name: caption, widget: string, required: false }
               - label: "Primary CTA"
                 name: primary_cta
                 widget: object

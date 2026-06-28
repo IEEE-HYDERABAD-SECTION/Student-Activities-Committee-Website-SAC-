@@ -95,17 +95,52 @@
   // ---------- Lightweight carousels ----------
   document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     const track = carousel.querySelector("[data-carousel-track]");
-    const section = carousel.closest(".event-gallery") || carousel.parentElement;
+    const section = carousel.closest(".hero-carousel") || carousel.parentElement;
     const prev = section ? section.querySelector("[data-carousel-prev]") : null;
     const next = section ? section.querySelector("[data-carousel-next]") : null;
+    const dots = section ? Array.from(section.querySelectorAll("[data-carousel-dot]")) : [];
+    const slides = track ? Array.from(track.children) : [];
     if (!track) return;
+    let index = 0;
+    let timer = null;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function move(direction) {
-      const distance = track.clientWidth * direction;
-      track.scrollBy({ left: distance, behavior: "smooth" });
+    function setActive(nextIndex, smooth = true) {
+      if (!slides.length) return;
+      index = (nextIndex + slides.length) % slides.length;
+      track.scrollTo({ left: track.clientWidth * index, behavior: smooth ? "smooth" : "auto" });
+      dots.forEach((dot, i) => {
+        const active = i === index;
+        dot.classList.toggle("is-active", active);
+        if (active) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
     }
 
-    if (prev) prev.addEventListener("click", () => move(-1));
-    if (next) next.addEventListener("click", () => move(1));
+    function restartAutoplay() {
+      window.clearInterval(timer);
+      if (reduceMotion || slides.length < 2) return;
+      timer = window.setInterval(() => setActive(index + 1), 5000);
+    }
+
+    if (prev) prev.addEventListener("click", () => { setActive(index - 1); restartAutoplay(); });
+    if (next) next.addEventListener("click", () => { setActive(index + 1); restartAutoplay(); });
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { setActive(i); restartAutoplay(); }));
+
+    track.addEventListener("scroll", () => {
+      const nextIndex = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+      if (nextIndex !== index && nextIndex >= 0 && nextIndex < slides.length) setActive(nextIndex, false);
+    }, { passive: true });
+    const pauseTarget = section || carousel;
+    pauseTarget.addEventListener("mouseenter", () => window.clearInterval(timer));
+    pauseTarget.addEventListener("mouseleave", restartAutoplay);
+    pauseTarget.addEventListener("focusin", () => window.clearInterval(timer));
+    pauseTarget.addEventListener("focusout", restartAutoplay);
+
+    setActive(0, false);
+    restartAutoplay();
   });
 })();
