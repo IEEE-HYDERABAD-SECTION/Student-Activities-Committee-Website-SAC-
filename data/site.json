@@ -12,19 +12,19 @@
     "eyebrow": "IEEE Hyderabad Section",
     "title": "Student Activities Committee",
     "subtitle": "Building the next generation of engineers through leadership, technical excellence, and community impact.",
-    "image": "/images/hero.png",
+    "image": "",
     "carousel": [
       {
-        "src": "/images/hero.png",
-        "alt": "IEEE Hyderabad SAC team"
+        "src": "/images/img-20251228-wa0004.jpg.jpeg"
       },
       {
-        "src": "/images/events.jpg",
-        "alt": "IEEE Hyderabad SAC event"
+        "src": "/images/img_9071.jpg.jpeg"
       },
       {
-        "src": "/images/awards.jpg",
-        "alt": "IEEE Hyderabad SAC awards"
+        "src": "/images/img-20251214-wa0043.jpg.jpeg"
+      },
+      {
+        "src": "/images/img-20251228-wa0025.jpg.jpeg"
       }
     ],
     "primary_cta": {
