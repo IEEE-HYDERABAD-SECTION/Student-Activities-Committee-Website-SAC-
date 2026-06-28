@@ -108,7 +108,13 @@
     function setActive(nextIndex, smooth = true) {
       if (!slides.length) return;
       index = (nextIndex + slides.length) % slides.length;
-      track.scrollTo({ left: track.clientWidth * index, behavior: smooth ? "smooth" : "auto" });
+      carousel.classList.toggle("is-instant", !smooth);
+      slides.forEach((slide, i) => {
+        const active = i === index;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", String(!active));
+      });
+      if (!smooth) requestAnimationFrame(() => carousel.classList.remove("is-instant"));
       dots.forEach((dot, i) => {
         const active = i === index;
         dot.classList.toggle("is-active", active);
@@ -129,11 +135,6 @@
     if (prev) prev.addEventListener("click", () => { setActive(index - 1); restartAutoplay(); });
     if (next) next.addEventListener("click", () => { setActive(index + 1); restartAutoplay(); });
     dots.forEach((dot, i) => dot.addEventListener("click", () => { setActive(i); restartAutoplay(); }));
-
-    track.addEventListener("scroll", () => {
-      const nextIndex = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
-      if (nextIndex !== index && nextIndex >= 0 && nextIndex < slides.length) setActive(nextIndex, false);
-    }, { passive: true });
     const pauseTarget = section || carousel;
     pauseTarget.addEventListener("mouseenter", () => window.clearInterval(timer));
     pauseTarget.addEventListener("mouseleave", restartAutoplay);

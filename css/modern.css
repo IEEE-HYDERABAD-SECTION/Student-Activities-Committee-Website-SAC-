@@ -342,10 +342,14 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
               var(--surface);
 }
 .hero-grid { display: grid; gap: var(--s-7); align-items: center; }
-@media (min-width: 900px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
 .hero h1 { font-size: var(--fs-3xl); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-5); }
-.hero-visual { position: relative; max-width: 520px; margin-inline: auto; }
+.hero-visual { position: relative; width: 100%; max-width: 760px; margin-inline: auto; }
+
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+  .hero-visual { justify-self: end; }
+}
 
 /* Hero photo */
 .hero-photo-wrap {
@@ -364,22 +368,6 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 .hero-carousel .carousel-slide img {
   aspect-ratio: 4 / 3;
   max-height: none;
-}
-.hero-carousel-controls {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--s-4);
-  pointer-events: none;
-}
-.hero-carousel-controls .carousel-button {
-  pointer-events: auto;
-  background: rgba(255, 255, 255, 0.9);
-  color: #0b1f3a;
-  border-color: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 10px 24px rgba(11, 31, 58, 0.18);
 }
 .hero-carousel .carousel-dots {
   position: absolute;
@@ -604,21 +592,26 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
   box-shadow: var(--sh-2);
 }
 .carousel-track {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+  display: grid;
 }
-.carousel-track::-webkit-scrollbar { display: none; }
 .carousel-slide {
-  flex: 0 0 100%;
+  grid-area: 1 / 1;
   min-width: 0;
   margin: 0;
-  scroll-snap-align: start;
   position: relative;
   background: var(--surface-alt);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--dur-slow) var(--ease), visibility 0s linear var(--dur-slow);
 }
+.carousel-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+.carousel.is-instant .carousel-slide { transition: none; }
 .carousel-slide img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -658,11 +651,6 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
   transform: translateY(-1px);
 }
 @media (max-width: 620px) {
-  .hero-carousel-controls { padding: var(--s-3); }
-  .hero-carousel-controls .carousel-button {
-    width: 36px;
-    height: 36px;
-  }
   .carousel-slide img { aspect-ratio: 4 / 3; }
 }
 
