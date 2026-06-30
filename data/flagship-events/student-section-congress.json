@@ -1,19 +1,26 @@
 {
   "title": "Student Section Congress",
   "slug": "student-section-congress",
-  "year": "Annual",
-  "edition": "Flagship Congress",
-  "status": "active",
+  "tagline": "The section-wide student leadership congress of IEEE Hyderabad SAC.",
+  "category": "Congress",
+  "started_year": "2021",
+  "frequency": "Annual",
   "featured": true,
   "order": 1,
-  "summary": "The section-level student congress bringing together IEEE student branches, leaders, volunteers, and industry voices across the Hyderabad Section.",
-  "description": "Student Section Congress is a flagship IEEE Hyderabad SAC gathering focused on leadership, networking, student branch development, technical sessions, cultural exchange, and recognition of volunteer contributions.",
+  "short_description": "The section-level student congress bringing together IEEE student branches, leaders, volunteers, and industry voices across the Hyderabad Section.",
+  "long_description": "Student Section Congress is a flagship IEEE Hyderabad SAC platform focused on leadership, networking, student branch development, technical sessions, cultural exchange, and recognition of volunteer contributions. It gives students a larger stage to learn from IEEE leaders, collaborate across branches, and strengthen the volunteer ecosystem.",
   "cover_image": "",
-  "archive_url": "/archive/ssc.html",
-  "cta": {
-    "label": "View Archive",
-    "href": "/archive/ssc.html"
-  },
+  "logo": "",
+  "theme_color": "#00629b",
   "tags": ["Congress", "Leadership", "Student Branches"],
+  "highlights": [
+    "Student branch leadership sessions",
+    "Networking with IEEE volunteers and section leaders",
+    "Technical, professional, and community-focused activities"
+  ],
+  "stats": [
+    { "value": "Annual", "label": "Frequency" },
+    { "value": "Section-wide", "label": "Reach" }
+  ],
   "gallery": []
 }

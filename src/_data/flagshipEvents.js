@@ -13,7 +13,6 @@ function loadAll() {
       const item = JSON.parse(fs.readFileSync(path.join(FLAGSHIP_DIR, file), "utf8"));
       item._filename = file;
       item.slug = item.slug || file.replace(/\.json$/, "");
-      item.status = item.status || "active";
       item.order = Number.isFinite(Number(item.order)) ? Number(item.order) : 999;
       return item;
     });
@@ -28,7 +27,5 @@ module.exports = function () {
   return {
     all,
     featured: all.filter((item) => item.featured),
-    active: all.filter((item) => item.status !== "archived"),
-    archived: all.filter((item) => item.status === "archived"),
   };
 };

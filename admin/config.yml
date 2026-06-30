@@ -97,32 +97,102 @@ collections:
     slug: "{{slug}}"
     extension: json
     format: json
-    summary: "{{title}} - {{year}}"
-    sortable_fields: [order, year, title, status]
+    summary: "{{title}}"
+    sortable_fields: [order, title, category, started_year]
     fields:
       - { label: "Title", name: title, widget: string }
       - { label: "Slug", name: slug, widget: string, hint: "URL-safe value, e.g. student-section-congress" }
-      - { label: "Year / Cycle", name: year, widget: string, required: false, hint: "Example: 2026, Annual, 2025-26" }
-      - { label: "Edition / Label", name: edition, widget: string, required: false, hint: "Example: Zonal Congress, Flagship Program" }
-      - label: "Status"
-        name: status
-        widget: select
-        options: ["active", "upcoming", "archived"]
-        default: "active"
+      - { label: "Tagline", name: tagline, widget: string, required: false }
+      - { label: "Category", name: category, widget: string, required: false, hint: "Example: Congress, Zonal Congress, Flagship Program" }
+      - { label: "Started Year", name: started_year, widget: string, required: false }
+      - { label: "Frequency", name: frequency, widget: string, required: false, hint: "Example: Annual, Recurring, Edition-based" }
       - { label: "Feature?", name: featured, widget: boolean, default: false }
       - { label: "Display Order", name: order, widget: number, value_type: int, default: 99 }
-      - { label: "Short Summary", name: summary, widget: text }
-      - { label: "Full Description", name: description, widget: text, required: false }
+      - { label: "Short Description", name: short_description, widget: text }
+      - { label: "Long Description", name: long_description, widget: text, required: false }
       - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
-      - { label: "Legacy Archive URL", name: archive_url, widget: string, required: false, hint: "Optional old archive page or external reference link" }
-      - label: "Primary CTA"
-        name: cta
-        widget: object
+      - { label: "Logo / Badge", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+      - { label: "Theme Color", name: theme_color, widget: string, required: false, hint: "Hex color, e.g. #00629b" }
+      - { label: "Tags", name: tags, widget: list, required: false, default: [] }
+      - { label: "Highlights", name: highlights, widget: list, required: false, default: [] }
+      - label: "Stats"
+        name: stats
+        widget: list
         required: false
         fields:
-          - { label: "Label", name: label, widget: string, required: false }
-          - { label: "Link", name: href, widget: string, required: false }
-      - { label: "Tags", name: tags, widget: list, required: false, default: [] }
+          - { label: "Value", name: value, widget: string }
+          - { label: "Label", name: label, widget: string }
+      - label: "Gallery"
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+          - { label: "Alt Text", name: alt, widget: string, required: false }
+          - { label: "Caption", name: caption, widget: string, required: false }
+
+  - name: flagship_editions
+    label: "Flagship Editions"
+    label_singular: "Flagship Edition"
+    folder: data/flagship-editions
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: json
+    format: json
+    summary: "{{title}} - {{year}}"
+    sortable_fields: [year, title, flagship, date]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Slug", name: slug, widget: string, hint: "URL-safe value, e.g. utsang-2026" }
+      - label: "Parent Flagship"
+        name: flagship
+        widget: relation
+        collection: flagship_events
+        search_fields: [title, slug]
+        value_field: slug
+        display_fields: [title]
+      - { label: "Year", name: year, widget: string }
+      - { label: "Date", name: date, widget: datetime, required: false, picker_utc: false }
+      - { label: "Venue", name: venue, widget: string, required: false }
+      - { label: "Theme", name: theme, widget: string, required: false }
+      - { label: "Summary", name: summary, widget: text, required: false }
+      - { label: "Description", name: description, widget: text, required: false }
+      - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+      - { label: "Related Event Slug", name: related_event_slug, widget: string, required: false, hint: "Optional normal event slug if this edition also appears under Events" }
+      - { label: "Report PDF", name: report_pdf, widget: file, required: false, media_folder: "/assets/reports", public_folder: "/assets/reports" }
+      - { label: "Outcomes", name: outcomes, widget: list, required: false, default: [] }
+      - label: "Speakers / Guests"
+        name: speakers
+        widget: list
+        required: false
+        fields:
+          - { label: "Name", name: name, widget: string }
+          - { label: "Role", name: role, widget: string, required: false }
+          - { label: "Organization", name: organization, widget: string, required: false }
+      - label: "Schedule"
+        name: schedule
+        widget: list
+        required: false
+        fields:
+          - { label: "Time", name: time, widget: string, required: false }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Description", name: description, widget: text, required: false }
+      - label: "Sponsors"
+        name: sponsors
+        widget: list
+        required: false
+        fields:
+          - { label: "Name", name: name, widget: string }
+          - { label: "Logo", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+          - { label: "Website", name: website, widget: string, required: false }
+      - label: "Team"
+        name: team
+        widget: list
+        required: false
+        fields:
+          - { label: "Name", name: name, widget: string }
+          - { label: "Role", name: role, widget: string, required: false }
       - label: "Gallery"
         name: gallery
         widget: list

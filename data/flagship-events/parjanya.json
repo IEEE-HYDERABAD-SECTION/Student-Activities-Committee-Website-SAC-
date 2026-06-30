@@ -1,19 +1,25 @@
 {
   "title": "Parjanya",
   "slug": "parjanya",
-  "year": "2021",
-  "edition": "Flagship Program",
-  "status": "archived",
+  "tagline": "A flagship student activities program with contests, sessions, and creative participation.",
+  "category": "Flagship Program",
+  "started_year": "2021",
+  "frequency": "Edition-based",
   "featured": false,
   "order": 4,
-  "summary": "A flagship IEEE student program with sessions, contests, and creative participation across student communities.",
-  "description": "Parjanya highlighted student participation through technical and non-technical competitions, speaker sessions, and community-building activities.",
+  "short_description": "A flagship IEEE student program with sessions, contests, and creative participation across student communities.",
+  "long_description": "Parjanya highlighted student participation through technical and non-technical competitions, speaker sessions, and community-building activities.",
   "cover_image": "",
-  "archive_url": "/archive/parjanya.html",
-  "cta": {
-    "label": "View Archive",
-    "href": "/archive/parjanya.html"
-  },
+  "logo": "",
+  "theme_color": "#00629b",
   "tags": ["Flagship", "Student Activities", "Competitions"],
+  "highlights": [
+    "Technical and non-technical contests",
+    "Speaker sessions",
+    "Community-building activities"
+  ],
+  "stats": [
+    { "value": "2021", "label": "Known Edition" }
+  ],
   "gallery": []
 }

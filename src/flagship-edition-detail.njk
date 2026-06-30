@@ -1,0 +1,111 @@
+---
+pagination:
+  data: flagshipEditions.all
+  size: 1
+  alias: edition
+permalink: "/flagship-events/{{ edition.flagship | safe }}/{{ edition.slug | safe }}/"
+eleventyComputed:
+  title: "{{ edition.title }}"
+  description: "{{ edition.summary }}"
+layout: layouts/base.njk
+---
+
+<section class="section">
+  <div class="container" style="max-width: 920px">
+    <a href="/flagship-events/{{ edition.flagship }}/" style="display: inline-flex; align-items: center; gap: var(--s-2); color: var(--ink-mute); font-size: var(--fs-sm); text-decoration: none; margin-bottom: var(--s-6)" class="reveal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Flagship
+    </a>
+
+    {% if edition.cover_image %}
+      <div class="reveal" style="margin-bottom: var(--s-6)">
+        <img src="{{ edition.cover_image }}" alt="{{ edition.title }}" style="width: 100%; border-radius: var(--r-lg); max-height: 500px; object-fit: cover; box-shadow: var(--sh-3)" loading="eager" />
+      </div>
+    {% endif %}
+
+    <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4)">
+      {% if edition.year %}<span class="pill">{{ edition.year }}</span>{% endif %}
+      {% if edition.date %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ edition.date | displayDate }}</span>{% endif %}
+      {% if edition.venue %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ edition.venue }}</span>{% endif %}
+    </div>
+
+    <h1 class="reveal" style="font-size: clamp(var(--fs-xl), 4vw, var(--fs-2xl)); line-height: 1.2; margin-bottom: var(--s-4)">{{ edition.title }}</h1>
+    {% if edition.theme %}<p class="reveal" style="color: var(--ieee-blue); font-weight: 700; margin-bottom: var(--s-5)">{{ edition.theme }}</p>{% endif %}
+    {% if edition.summary %}<p class="reveal" style="font-size: var(--fs-md); line-height: 1.8">{{ edition.summary }}</p>{% endif %}
+
+    {% if edition.description %}
+      <div class="event-content reveal" style="margin-top: var(--s-7)">
+        <h2>About this Edition</h2>
+        <p>{{ edition.description }}</p>
+      </div>
+    {% endif %}
+
+    {% if edition.outcomes and edition.outcomes.length %}
+      <section class="event-content reveal">
+        <h2>Outcomes</h2>
+        <div class="grid grid-3">
+          {% for outcome in edition.outcomes %}
+            <div class="card card-glass" style="padding: var(--s-5)">
+              <p style="margin: 0">{{ outcome }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% if edition.speakers and edition.speakers.length %}
+      <section class="event-content reveal">
+        <h2>Speakers & Guests</h2>
+        <div class="grid grid-3">
+          {% for speaker in edition.speakers %}
+            <div class="card" style="padding: var(--s-5)">
+              <h3 style="font-size: var(--fs-md)">{{ speaker.name }}</h3>
+              {% if speaker.role %}<p style="margin: 0">{{ speaker.role }}</p>{% endif %}
+              {% if speaker.organization %}<p style="margin: 0; color: var(--ink-mute); font-size: var(--fs-sm)">{{ speaker.organization }}</p>{% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% if edition.schedule and edition.schedule.length %}
+      <section class="event-content reveal">
+        <h2>Schedule</h2>
+        <div class="stack">
+          {% for item in edition.schedule %}
+            <div class="card" style="padding: var(--s-5)">
+              {% if item.time %}<p style="margin: 0; color: var(--ieee-blue); font-weight: 700">{{ item.time }}</p>{% endif %}
+              <h3 style="font-size: var(--fs-md)">{{ item.title }}</h3>
+              {% if item.description %}<p style="margin: 0">{{ item.description }}</p>{% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% if edition.gallery and edition.gallery.length %}
+      <section class="event-gallery reveal" aria-labelledby="edition-gallery-title">
+        <span class="eyebrow">Gallery</span>
+        <h2 id="edition-gallery-title">Moments from this Edition</h2>
+        <div class="event-photo-grid">
+          {% for image in edition.gallery %}
+            <figure class="event-photo">
+              <img src="{{ image.src or image }}" alt="{{ image.alt or edition.title }}" loading="lazy" />
+              {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+            </figure>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-7)">
+      {% if edition.related_event_slug %}
+        <a class="btn btn-primary" href="/events/{{ edition.related_event_slug }}/">View Event Page</a>
+      {% endif %}
+      {% if edition.report_pdf %}
+        <a class="btn btn-ghost" href="{{ edition.report_pdf }}">View Report</a>
+      {% endif %}
+      <a class="btn btn-ghost" href="/flagship-events/{{ edition.flagship }}/">Back to Flagship</a>
+    </div>
+  </div>
+</section>

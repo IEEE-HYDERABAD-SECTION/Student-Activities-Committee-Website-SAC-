@@ -1,19 +1,25 @@
 {
   "title": "IGEN",
   "slug": "igen",
-  "year": "2020",
-  "edition": "Flagship Program",
-  "status": "archived",
+  "tagline": "A flagship student engagement program for learning, contests, and professional growth.",
+  "category": "Flagship Program",
+  "started_year": "2020",
+  "frequency": "Edition-based",
   "featured": false,
   "order": 5,
-  "summary": "A flagship student engagement program with workshops, contests, and professional development activities.",
-  "description": "IGEN supported IEEE students through technical contests, learning sessions, communication-focused activities, and branch-level engagement.",
+  "short_description": "A flagship student engagement program with workshops, contests, and professional development activities.",
+  "long_description": "IGEN supported IEEE students through technical contests, learning sessions, communication-focused activities, and branch-level engagement.",
   "cover_image": "",
-  "archive_url": "/archive/igen.html",
-  "cta": {
-    "label": "View Archive",
-    "href": "/archive/igen.html"
-  },
+  "logo": "",
+  "theme_color": "#00629b",
   "tags": ["Flagship", "Workshops", "Professional Development"],
+  "highlights": [
+    "Technical contests",
+    "Learning sessions",
+    "Professional development activities"
+  ],
+  "stats": [
+    { "value": "2020", "label": "Known Edition" }
+  ],
   "gallery": []
 }

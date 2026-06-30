@@ -96,12 +96,11 @@
           "heading": "Congress & Flagship",
           "links": [
             { "label": "Flagship Events", "href": "/flagship-events/" },
-            { "label": "SSC", "href": "/archive/ssc.html" },
-            { "label": "SSC 2023", "href": "/archive/SSC2023.html" },
-            { "label": "SSC 2022", "href": "/archive/SSC2022.html" },
-            { "label": "Adithyam 2021", "href": "/archive/adithyam.html" },
-            { "label": "Parjanya 2021", "href": "/archive/parjanya.html" },
-            { "label": "IGEN 2020", "href": "/archive/igen.html" }
+            { "label": "Student Section Congress", "href": "/flagship-events/student-section-congress/" },
+            { "label": "Utsang", "href": "/flagship-events/utsang/" },
+            { "label": "Adithyam", "href": "/flagship-events/adithyam/" },
+            { "label": "Parjanya", "href": "/flagship-events/parjanya/" },
+            { "label": "IGEN", "href": "/flagship-events/igen/" }
           ]
         }
       ]

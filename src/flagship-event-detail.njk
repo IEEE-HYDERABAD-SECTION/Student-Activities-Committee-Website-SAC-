@@ -6,9 +6,11 @@ pagination:
 permalink: "/flagship-events/{{ flagship.slug | safe }}/"
 eleventyComputed:
   title: "{{ flagship.title }}"
-  description: "{{ flagship.summary }}"
+  description: "{{ flagship.short_description }}"
 layout: layouts/base.njk
 ---
+
+{% set editions = flagshipEditions.byFlagship[flagship.slug] or [] %}
 
 <section class="section">
   <div class="container" style="max-width: 920px">
@@ -24,27 +26,77 @@ layout: layouts/base.njk
     {% endif %}
 
     <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-4)">
-      <span class="pill {% if flagship.status == 'archived' %}pill-past{% endif %}">
-        {% if flagship.status == "archived" %}Archived{% elif flagship.status == "upcoming" %}Upcoming{% else %}Active{% endif %}
-      </span>
-      {% if flagship.year %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ flagship.year }}</span>{% endif %}
+      {% if flagship.category %}<span class="pill">{{ flagship.category }}</span>{% endif %}
+      {% if flagship.frequency %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ flagship.frequency }}</span>{% endif %}
+      {% if flagship.started_year %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">Since {{ flagship.started_year }}</span>{% endif %}
       {% for tag in flagship.tags %}
         <span class="pill" style="background: color-mix(in srgb, var(--ieee-blue) 12%, transparent); color: var(--ieee-blue)">{{ tag }}</span>
       {% endfor %}
     </div>
 
     <h1 class="reveal" style="font-size: clamp(var(--fs-xl), 4vw, var(--fs-2xl)); line-height: 1.2; margin-bottom: var(--s-3)">{{ flagship.title }}</h1>
-    {% if flagship.edition %}<p class="reveal" style="color: var(--ieee-blue); font-weight: 700; margin-bottom: var(--s-5)">{{ flagship.edition }}</p>{% endif %}
+    {% if flagship.tagline %}<p class="reveal" style="color: var(--ieee-blue); font-weight: 700; margin-bottom: var(--s-5)">{{ flagship.tagline }}</p>{% endif %}
 
-    {% if flagship.summary %}
-      <p class="reveal" style="font-size: var(--fs-md); line-height: 1.8">{{ flagship.summary }}</p>
+    {% if flagship.short_description %}
+      <p class="reveal" style="font-size: var(--fs-md); line-height: 1.8">{{ flagship.short_description }}</p>
     {% endif %}
 
-    {% if flagship.description %}
+    {% if flagship.stats and flagship.stats.length %}
+      <div class="stats reveal" style="margin-top: var(--s-6); margin-bottom: var(--s-7)">
+        {% for stat in flagship.stats %}
+          <div class="stat">
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if flagship.long_description %}
       <div class="event-content reveal" style="margin-top: var(--s-7)">
         <h2>About the Program</h2>
-        <p>{{ flagship.description }}</p>
+        <p>{{ flagship.long_description }}</p>
       </div>
+    {% endif %}
+
+    {% if flagship.highlights and flagship.highlights.length %}
+      <section class="event-content reveal">
+        <h2>Highlights</h2>
+        <div class="grid grid-3">
+          {% for highlight in flagship.highlights %}
+            <div class="card card-glass" style="padding: var(--s-5)">
+              <p style="margin: 0">{{ highlight }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% if editions.length %}
+      <section class="event-gallery reveal" aria-labelledby="flagship-editions-title">
+        <span class="eyebrow">Editions</span>
+        <h2 id="flagship-editions-title">Year-wise Editions</h2>
+        <div class="grid grid-3">
+          {% for edition in editions %}
+            <article class="card">
+              {% if edition.cover_image %}
+                <a href="/flagship-events/{{ flagship.slug }}/{{ edition.slug }}/" class="card-image" style="display: block">
+                  <img src="{{ edition.cover_image }}" alt="{{ edition.title }}" loading="lazy" />
+                </a>
+              {% endif %}
+              <div class="card-body">
+                <div class="card-meta">
+                  {% if edition.year %}<span>{{ edition.year }}</span>{% endif %}
+                  {% if edition.venue %}<span>{{ edition.venue }}</span>{% endif %}
+                </div>
+                <h3><a href="/flagship-events/{{ flagship.slug }}/{{ edition.slug }}/" style="color: inherit">{{ edition.title }}</a></h3>
+                {% if edition.summary %}<p style="margin: 0; font-size: var(--fs-sm)">{{ edition.summary }}</p>{% endif %}
+                <a class="btn btn-ghost btn-sm" href="/flagship-events/{{ flagship.slug }}/{{ edition.slug }}/" style="align-self: flex-start; margin-top: auto">View Edition</a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
     {% endif %}
 
     {% if flagship.gallery and flagship.gallery.length %}
@@ -65,15 +117,6 @@ layout: layouts/base.njk
     {% endif %}
 
     <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-7)">
-      {% if flagship.cta and flagship.cta.href %}
-        <a class="btn btn-primary" href="{{ flagship.cta.href }}">
-          {{ flagship.cta.label or "Learn More" }}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      {% endif %}
-      {% if flagship.archive_url and (not flagship.cta or flagship.archive_url != flagship.cta.href) %}
-        <a class="btn btn-ghost" href="{{ flagship.archive_url }}">View Legacy Archive</a>
-      {% endif %}
       <a class="btn btn-ghost" href="/flagship-events/">Back to Flagship Events</a>
     </div>
   </div>

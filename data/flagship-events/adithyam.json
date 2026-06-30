@@ -1,19 +1,25 @@
 {
   "title": "Adithyam",
   "slug": "adithyam",
-  "year": "2021",
-  "edition": "Flagship Program",
-  "status": "archived",
+  "tagline": "A student-focused flagship program with sessions, competitions, and collaboration.",
+  "category": "Flagship Program",
+  "started_year": "2021",
+  "frequency": "Edition-based",
   "featured": false,
   "order": 3,
-  "summary": "A student-focused flagship program featuring sessions, competitions, and collaborative activities for IEEE members.",
-  "description": "Adithyam brought together students and volunteers through curated technical, professional, and engagement activities under the IEEE Hyderabad SAC ecosystem.",
+  "short_description": "A student-focused flagship program featuring sessions, competitions, and collaborative activities for IEEE members.",
+  "long_description": "Adithyam brought together students and volunteers through curated technical, professional, and engagement activities under the IEEE Hyderabad SAC ecosystem.",
   "cover_image": "",
-  "archive_url": "/archive/adithyam.html",
-  "cta": {
-    "label": "View Archive",
-    "href": "/archive/adithyam.html"
-  },
+  "logo": "",
+  "theme_color": "#00629b",
   "tags": ["Flagship", "Competitions", "Students"],
+  "highlights": [
+    "Student engagement sessions",
+    "Competitions and collaborative activities",
+    "Volunteer-led program execution"
+  ],
+  "stats": [
+    { "value": "2021", "label": "Known Edition" }
+  ],
   "gallery": []
 }
