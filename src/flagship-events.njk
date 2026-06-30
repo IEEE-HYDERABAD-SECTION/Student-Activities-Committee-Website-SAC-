@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: Flagship Events
+description: Major IEEE Hyderabad SAC flagship events, congresses, and recurring student programs.
+permalink: /flagship-events/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Congress & Flagship</span>
+      <h1>Flagship Events</h1>
+      <p>Major recurring SAC programs, student congresses, and section-wide initiatives managed from the CMS.</p>
+    </div>
+
+    {% if flagshipEvents.active.length %}
+      <div class="grid grid-3">
+        {% for item in flagshipEvents.active %}
+          <article class="card reveal">
+            {% if item.cover_image %}
+              <a href="/flagship-events/{{ item.slug }}/" class="card-image" style="display: block">
+                <img src="{{ item.cover_image }}" alt="{{ item.title }}" loading="lazy" />
+              </a>
+            {% endif %}
+            <div class="card-body">
+              <div class="flex" style="justify-content: space-between; align-items: center; gap: var(--s-3)">
+                <span class="pill">{{ "Upcoming" if item.status == "upcoming" else "Active" }}</span>
+                {% if item.year %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ item.year }}</span>{% endif %}
+              </div>
+              <h3><a href="/flagship-events/{{ item.slug }}/" style="color: inherit">{{ item.title }}</a></h3>
+              {% if item.edition %}<p style="margin: 0; color: var(--ieee-blue); font-size: var(--fs-sm); font-weight: 700">{{ item.edition }}</p>{% endif %}
+              {% if item.summary %}<p style="margin: 0; font-size: var(--fs-sm)">{{ item.summary }}</p>{% endif %}
+              <a class="btn btn-primary btn-sm" href="/flagship-events/{{ item.slug }}/" style="align-self: flex-start; margin-top: auto">
+                View Program
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if flagshipEvents.archived.length %}
+      <h2 id="archives" style="margin-top: var(--s-9)">Archived Flagship Programs</h2>
+      <div class="grid grid-3" style="margin-top: var(--s-5)">
+        {% for item in flagshipEvents.archived %}
+          <article class="card reveal">
+            {% if item.cover_image %}
+              <a href="/flagship-events/{{ item.slug }}/" class="card-image" style="display: block">
+                <img src="{{ item.cover_image }}" alt="{{ item.title }}" loading="lazy" />
+              </a>
+            {% endif %}
+            <div class="card-body">
+              <div class="flex" style="justify-content: space-between; align-items: center; gap: var(--s-3)">
+                <span class="pill pill-past">Archived</span>
+                {% if item.year %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ item.year }}</span>{% endif %}
+              </div>
+              <h3><a href="/flagship-events/{{ item.slug }}/" style="color: inherit">{{ item.title }}</a></h3>
+              {% if item.summary %}<p style="margin: 0; font-size: var(--fs-sm)">{{ item.summary }}</p>{% endif %}
+              <a class="btn btn-ghost btn-sm" href="/flagship-events/{{ item.slug }}/" style="align-self: flex-start; margin-top: auto">View Details</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

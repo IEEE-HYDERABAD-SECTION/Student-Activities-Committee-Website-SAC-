@@ -1,0 +1,19 @@
+{
+  "title": "Utsang",
+  "slug": "utsang",
+  "year": "2026",
+  "edition": "Zonal Congress",
+  "status": "active",
+  "featured": true,
+  "order": 2,
+  "summary": "A zonal congress series designed to connect student branches, volunteers, faculty coordinators, and IEEE leaders across regional hubs.",
+  "description": "Utsang creates a shared platform for student branches to collaborate, learn from IEEE leaders, participate in themed sessions, and build stronger regional student networks.",
+  "cover_image": "",
+  "archive_url": "",
+  "cta": {
+    "label": "Explore Events",
+    "href": "/events/"
+  },
+  "tags": ["Zonal Congress", "Networking", "Leadership"],
+  "gallery": []
+}

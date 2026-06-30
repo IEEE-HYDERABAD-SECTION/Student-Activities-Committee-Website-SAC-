@@ -1,0 +1,19 @@
+{
+  "title": "Adithyam",
+  "slug": "adithyam",
+  "year": "2021",
+  "edition": "Flagship Program",
+  "status": "archived",
+  "featured": false,
+  "order": 3,
+  "summary": "A student-focused flagship program featuring sessions, competitions, and collaborative activities for IEEE members.",
+  "description": "Adithyam brought together students and volunteers through curated technical, professional, and engagement activities under the IEEE Hyderabad SAC ecosystem.",
+  "cover_image": "",
+  "archive_url": "/archive/adithyam.html",
+  "cta": {
+    "label": "View Archive",
+    "href": "/archive/adithyam.html"
+  },
+  "tags": ["Flagship", "Competitions", "Students"],
+  "gallery": []
+}

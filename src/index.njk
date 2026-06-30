@@ -105,6 +105,34 @@ eleventyNavigation:
 </section>
 {% endif %}
 
+{% if flagshipEvents.featured.length %}
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Flagship Programs</span>
+      <h2>Congress & Major Initiatives</h2>
+      <p>Recurring SAC programs and student congresses that anchor leadership, collaboration, and student branch growth.</p>
+    </div>
+    <div class="grid grid-3">
+      {% for item in flagshipEvents.featured.slice(0, 3) %}
+        <article class="card card-glass reveal" style="padding: var(--s-6)">
+          <div class="flex" style="justify-content: space-between; align-items: center; gap: var(--s-3); margin-bottom: var(--s-3)">
+            <span class="pill">{{ "Upcoming" if item.status == "upcoming" else "Active" }}</span>
+            {% if item.year %}<span class="pill" style="background: var(--surface-alt); color: var(--ink-mute)">{{ item.year }}</span>{% endif %}
+          </div>
+          <h3>{{ item.title }}</h3>
+          {% if item.summary %}<p>{{ item.summary }}</p>{% endif %}
+          <a class="btn btn-ghost btn-sm" href="/flagship-events/{{ item.slug }}/" style="align-self: flex-start; margin-top: auto">View program -></a>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="text-center" style="margin-top: var(--s-6)">
+      <a class="btn btn-ghost" href="/flagship-events/">View all flagship events -></a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <div class="container">
     <div class="section-head reveal">

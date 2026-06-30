@@ -95,6 +95,7 @@
         {
           "heading": "Congress & Flagship",
           "links": [
+            { "label": "Flagship Events", "href": "/flagship-events/" },
             { "label": "SSC", "href": "/archive/ssc.html" },
             { "label": "SSC 2023", "href": "/archive/SSC2023.html" },
             { "label": "SSC 2022", "href": "/archive/SSC2022.html" },
