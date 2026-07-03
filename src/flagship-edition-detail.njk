@@ -99,8 +99,11 @@ layout: layouts/base.njk
     {% endif %}
 
     <div class="reveal" style="display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-7)">
+      {% if edition.vtools_url %}
+        <a class="btn btn-primary" href="{{ edition.vtools_url }}" target="_blank" rel="noopener">View on vTools</a>
+      {% endif %}
       {% if edition.related_event_slug %}
-        <a class="btn btn-primary" href="/events/{{ edition.related_event_slug }}/">View Event Page</a>
+        <a class="btn {% if edition.vtools_url %}btn-ghost{% else %}btn-primary{% endif %}" href="/events/{{ edition.related_event_slug }}/">View Event Page</a>
       {% endif %}
       {% if edition.report_pdf %}
         <a class="btn btn-ghost" href="{{ edition.report_pdf }}">View Report</a>

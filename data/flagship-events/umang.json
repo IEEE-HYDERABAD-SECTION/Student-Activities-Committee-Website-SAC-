@@ -1,0 +1,26 @@
+{
+  "title": "Umang",
+  "slug": "umang",
+  "tagline": "Anantapur Subsection Student Congress under IEEE Hyderabad SAC.",
+  "category": "Subsection Congress",
+  "started_year": "2025",
+  "frequency": "Recurring",
+  "featured": true,
+  "order": 3,
+  "short_description": "A flagship student congress for the Anantapur subsection, focused on student leadership, branch collaboration, and IEEE community building.",
+  "long_description": "Umang is the Anantapur subsection student congress platform under the IEEE Hyderabad Section student activities ecosystem. It brings together student branches, faculty coordinators, IEEE volunteers, and student leaders for learning, networking, and collaborative growth.",
+  "cover_image": "",
+  "logo": "",
+  "theme_color": "#00629b",
+  "tags": ["Subsection Congress", "Leadership", "Student Branches"],
+  "highlights": [
+    "Subsection-level student branch collaboration",
+    "IEEE volunteer and student leader networking",
+    "Technical and professional engagement for students"
+  ],
+  "stats": [
+    { "value": "2025", "label": "Known Edition" },
+    { "value": "Anantapur", "label": "Subsection" }
+  ],
+  "gallery": []
+}

@@ -3,21 +3,33 @@
   "slug": "utsang-2026",
   "flagship": "utsang",
   "year": "2026",
-  "date": "2026-04-11T09:30:00.000+05:30",
-  "venue": "SR University, Warangal",
+  "date": "2026-04-11T10:00:00.000+05:30",
+  "venue": "SRiX Auditorium, SR University Campus, Warangal, Telangana",
   "theme": "AI-Driven Innovation in Sustainable and Resilient Emerging Technologies",
-  "summary": "Warangal zonal congress connecting student branches, IEEE leaders, faculty, and students across the region.",
-  "description": "Utsang 2K26 brought together students from different colleges for networking, IEEE leader interactions, themed learning, and student branch collaboration.",
+  "summary": "Warangal zonal congress hosted by IEEE Student Branch, SR University, connecting students, researchers, academicians, industry experts, and IEEE leaders.",
+  "description": "Utsang 2K26 was the IEEE Warangal Zonal Student Congress held on 11 April 2026 at SR University. Hosted by the IEEE Student Branch of SR University in collaboration with IEEE Hyderabad Section SAC, the congress focused on AI-driven innovation in sustainable and resilient emerging technologies.",
   "cover_image": "/assets/uploads/event-30b44f69-8df1-40e9-a265-d345a90cfb96.jpeg",
+  "vtools_url": "https://events.vtools.ieee.org/m/553626",
   "related_event_slug": "2026-ieee-hyderabad-section-sac-proudly-presents-utsang-2k26-wara",
   "report_pdf": "",
   "outcomes": [
-    "Regional networking between student branches",
-    "IEEE leadership and faculty interaction",
-    "Theme-focused learning around AI and sustainable technologies"
+    "120 verified participants from the Warangal zone and broader Hyderabad Section",
+    "Regional networking between student branches, IEEE leaders, faculty, and students",
+    "Theme-focused learning around AI-driven sustainable and resilient emerging technologies"
   ],
   "speakers": [],
-  "schedule": [],
+  "schedule": [
+    {
+      "time": "10:00 AM",
+      "title": "Congress Opening",
+      "description": "Formal opening of the Warangal Zonal Student Congress."
+    },
+    {
+      "time": "10:00 AM - 4:30 PM",
+      "title": "Technical and Professional Sessions",
+      "description": "Sessions centered on AI-driven innovation, sustainability, resilience, and emerging technologies."
+    }
+  ],
   "sponsors": [],
   "team": [],
   "gallery": []

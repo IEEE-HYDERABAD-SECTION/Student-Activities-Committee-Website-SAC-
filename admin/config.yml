@@ -110,8 +110,8 @@ collections:
       - { label: "Display Order", name: order, widget: number, value_type: int, default: 99 }
       - { label: "Short Description", name: short_description, widget: text }
       - { label: "Long Description", name: long_description, widget: text, required: false }
-      - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
-      - { label: "Logo / Badge", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+      - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
+      - { label: "Logo / Badge", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
       - { label: "Theme Color", name: theme_color, widget: string, required: false, hint: "Hex color, e.g. #00629b" }
       - { label: "Tags", name: tags, widget: list, required: false, default: [] }
       - { label: "Highlights", name: highlights, widget: list, required: false, default: [] }
@@ -127,7 +127,7 @@ collections:
         widget: list
         required: false
         fields:
-          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
           - { label: "Alt Text", name: alt, widget: string, required: false }
           - { label: "Caption", name: caption, widget: string, required: false }
 
@@ -158,7 +158,8 @@ collections:
       - { label: "Theme", name: theme, widget: string, required: false }
       - { label: "Summary", name: summary, widget: text, required: false }
       - { label: "Description", name: description, widget: text, required: false }
-      - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+      - { label: "Cover Image", name: cover_image, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
+      - { label: "vTools URL", name: vtools_url, widget: string, required: false }
       - { label: "Related Event Slug", name: related_event_slug, widget: string, required: false, hint: "Optional normal event slug if this edition also appears under Events" }
       - { label: "Report PDF", name: report_pdf, widget: file, required: false, media_folder: "/assets/reports", public_folder: "/assets/reports" }
       - { label: "Outcomes", name: outcomes, widget: list, required: false, default: [] }
@@ -184,7 +185,7 @@ collections:
         required: false
         fields:
           - { label: "Name", name: name, widget: string }
-          - { label: "Logo", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+          - { label: "Logo", name: logo, widget: image, required: false, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
           - { label: "Website", name: website, widget: string, required: false }
       - label: "Team"
         name: team
@@ -198,7 +199,7 @@ collections:
         widget: list
         required: false
         fields:
-          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+          - { label: "Photo", name: src, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads", hint: "Upload/select images from Media assets. Files are stored in /assets/uploads." }
           - { label: "Alt Text", name: alt, widget: string, required: false }
           - { label: "Caption", name: caption, widget: string, required: false }
 
