@@ -71,20 +71,6 @@
   --footer-heading: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #e6ecf5;
-    --ink-soft: #b3c0d4;
-    --ink-mute: #8294af;
-    --line: #1f2c44;
-    --surface: #0b1424;
-    --surface-alt: #0f1b30;
-    --surface-glass: rgba(15, 27, 48, 0.7);
-    --ieee-blue: #4ea3d8;
-    --ieee-blue-light: #6cb5e2;
-  }
-}
-
 [data-theme="dark"] {
   --ink: #e6ecf5;
   --ink-soft: #b3c0d4;
@@ -327,10 +313,6 @@ p { margin: 0 0 var(--s-4); color: var(--ink-soft); }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 [data-theme="light"] .theme-toggle .icon-sun { display: none; }
 [data-theme="light"] .theme-toggle .icon-moon { display: block; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
 
 /* ---------- Hero ---------- */
 .hero {

@@ -31,7 +31,7 @@
     const attr = document.documentElement.getAttribute("data-theme");
     if (attr === "dark") return true;
     if (attr === "light") return false;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false;
   }
 
   function applyTheme(t) {
