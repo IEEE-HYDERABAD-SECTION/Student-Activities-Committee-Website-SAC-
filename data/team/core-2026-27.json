@@ -12,19 +12,19 @@
       "linkedin": ""
     },
     {
-      "name": "Vivin Chandrra Paasam",
-      "role": "Section Student Representative (SSR)",
-      "institution": "Vardhaman College of Engineering",
-      "photo": "/assets/uploads/team-vivinchandrap.jpg",
-      "email": "vivinchandrra@ieee.org",
-      "linkedin": ""
-    },
-    {
       "name": "Digvijay Rajoria",
-      "role": "Joint Section Student Representative (JSSR)",
+      "role": "Section Student Representative (SSR)",
       "institution": "KL Education Foundation, Aziz Nagar",
       "photo": "/assets/uploads/team-digvijay.jpg",
       "email": "digvijayrajoria@ieee.org",
+      "linkedin": ""
+    },
+    {
+      "name": "A. Mounish Reddy",
+      "role": "Joint Section Student Representative (JSSR)",
+      "institution": "VNR Vignana Jyothi Institute of Engineering & Technology",
+      "photo": "/assets/uploads/team-mounishankireddypalli.jpeg",
+      "email": "",
       "linkedin": ""
     }
   ]
