@@ -259,8 +259,25 @@ collections:
   - name: sn_team
     label: "SN Team"
     files:
+      - file: data/team/sn-2026.json
+        label: "SN Team 2026"
+        name: sn_2026
+        fields:
+          - { label: "Year", name: year, widget: string }
+          - { label: "Title", name: title, widget: string }
+          - { label: "Description", name: description, widget: text, required: false }
+          - label: "Members"
+            name: members
+            widget: list
+            fields:
+              - { label: "Full Name", name: name, widget: string }
+              - { label: "Role / Designation", name: role, widget: string }
+              - { label: "Institution", name: institution, widget: string, required: false }
+              - { label: "Photo", name: photo, widget: image, media_folder: "/assets/uploads", public_folder: "/assets/uploads" }
+              - { label: "Email", name: email, widget: string, required: false }
+              - { label: "LinkedIn", name: linkedin, widget: string, required: false }
       - file: data/team/sn-2025-26.json
-        label: "SN Team 2025-26"
+        label: "SN Team 2025-26 (archive)"
         name: sn_2025_26
         fields:
           - { label: "Year", name: year, widget: string }

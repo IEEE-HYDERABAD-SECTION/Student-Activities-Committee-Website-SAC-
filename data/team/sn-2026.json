@@ -1,0 +1,287 @@
+{
+  "year": "2026",
+  "title": "Student Network Team 2026",
+  "description": "The Student Network (SN) Team coordinates student branch activities across IEEE Hyderabad Section.",
+  "members": [
+    {
+      "name": "Digvijay Rajoria",
+      "role": "Section Student Representative (SSR)",
+      "institution": "KL Education Foundation, Aziz Nagar",
+      "photo": "/assets/uploads/team-digvijay.jpg",
+      "email": "digvijayrajoria@ieee.org",
+      "linkedin": ""
+    },
+    {
+      "name": "Mounish Ankireddypalli",
+      "role": "Joint Section Student Representative (JSSR)",
+      "institution": "VNR Vignana Jyothi Institute of Engineering & Technology",
+      "photo": "/assets/uploads/team-mounishankireddypalli.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Amulya Sharon",
+      "role": "Student Coordinator - Hyderabad Section & Graphic Design and Video Editing",
+      "institution": "G Narayanamma Institute of Technology and Science",
+      "photo": "/assets/uploads/team-amulyasharon.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "B Sravani",
+      "role": "Student Coordinator - Anantapur Sub-Section",
+      "institution": "G Pulla Reddy Engineering College",
+      "photo": "/images/SN_TEAM_2025-26/default.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Upali Nijamala",
+      "role": "Student Coordinator - Guntur Sub-Section & Graphic Design and Video Editing",
+      "institution": "NBKR Institute of Science and Technology",
+      "photo": "/assets/uploads/team-upalinijamala.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Mohd. Afzal Pasha",
+      "role": "Student Coordinator - Warangal Zone",
+      "institution": "Vaagdevi College of Engineering, Warangal",
+      "photo": "/assets/uploads/team-mohdafzalpasha.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Mandepudi Rohith",
+      "role": "Documentation and Content Writing",
+      "institution": "Vardhaman College of Engineering",
+      "photo": "/assets/uploads/team-mandepudirohith.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Gorijavolu Eshwar Sai",
+      "role": "Documentation and Content Writing",
+      "institution": "Vardhaman College of Engineering",
+      "photo": "/assets/uploads/team-gorijavolueshwarsai.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Kodali.Deshuk",
+      "role": "Documentation and Content Writing",
+      "institution": "Bapatla Engineering college",
+      "photo": "/assets/uploads/team-kodalideshuk.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Ruth G",
+      "role": "Documentation and Content Writing",
+      "institution": "Vignana Bharathi Institute of Technology",
+      "photo": "/assets/uploads/team-ruthg.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Saathvik Vennelaganti",
+      "role": "Documentation and Content Writing",
+      "institution": "JNTUH UCESTH",
+      "photo": "/assets/uploads/team-saathvikvennelaganti.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "SRI NEHA BOPPANA",
+      "role": "Documentation and Content Writing",
+      "institution": "BVRIT HYDERABAD College of Engineering for Women",
+      "photo": "/assets/uploads/team-srinehaboppana.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Aarush Chaudhary",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "SVKM's NMIMS, STME, Hyderabad",
+      "photo": "/assets/uploads/team-aarushchaudhary.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Sowmya Kuruva",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "G Pulla Reddy Engineering College",
+      "photo": "/assets/uploads/team-sowmyakuruva.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Karnam Pranith",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "Mohan Babu University",
+      "photo": "/assets/uploads/team-karnampranith.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Medha Gunreddy",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "CVR College of Engineering",
+      "photo": "/assets/uploads/team-medhagunreddy.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Nehal Mohammad",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "TKR college of engineering and technology",
+      "photo": "/assets/uploads/team-nehalmohammad.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "PATAN FIROZ KHAN",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "Rajeev Gandhi Memorial College of Engineering and Technology",
+      "photo": "/assets/uploads/team-firozkhan.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "RATNA PRESHITH VARDHAN MEDEPALLI",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "R.V.R & J.C College Of Engineering",
+      "photo": "/assets/uploads/team-ratnapreshithvardhanmedepalli.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Koushik Sarabada",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "KL Education Foundation - Bowrampet",
+      "photo": "/assets/uploads/team-koushiksarabada.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "VIPUL",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "VNR Vignana Jyothi Institute of Engineering & Technology",
+      "photo": "/assets/uploads/team-vipul.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Ravipati phani koteshwar rao",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "SR University",
+      "photo": "/assets/uploads/team-ravipatiphanikoteshwarrao.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Telidevara Sai Srujay",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "MVSR ENGINEERING COLLEGE",
+      "photo": "/assets/uploads/team-telidevarasaisrujay.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Madhu Niketh Maganti",
+      "role": "Event Management, Logistics and Sponsorships",
+      "institution": "KL University Vijayawada",
+      "photo": "/assets/uploads/team-madhunikethmaganti.png",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "TARAKA SRINIVAS MERUGA",
+      "role": "Graphic Design and Video Editing",
+      "institution": "Anurag University",
+      "photo": "/assets/uploads/team-tarakasrinivasmeruga.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "AKKHILESH UPPU",
+      "role": "Graphic Design and Video Editing",
+      "institution": "Vidya Jyothi Institute of Technology",
+      "photo": "/assets/uploads/team-akkhileshuppu.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "CHILLA SAI VARSHANTH",
+      "role": "Graphic Design and Video Editing",
+      "institution": "Sree Rama Engineering College",
+      "photo": "/assets/uploads/team-chillasaivarshanth.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Thungathurthy Sai Sri Harsha",
+      "role": "Graphic Design and Video Editing",
+      "institution": "Vaagdevi Engineering College",
+      "photo": "/assets/uploads/team-thungathurthysaisriharsha.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "CHINTHA SRI VINAYA VAMSI",
+      "role": "Graphic Design and Video Editing",
+      "institution": "Vignan's Foundation for Science, Technology and engineering",
+      "photo": "/assets/uploads/team-chinthasrivinayavamsi.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Khush Satyaprakash Jaisinghani",
+      "role": "Public Speaking",
+      "institution": "NIT Warangal",
+      "photo": "/assets/uploads/team-khushsatyaprakashjaisinghani.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Laxmi Chandrahaas Donthula",
+      "role": "Public Speaking",
+      "institution": "Symbiosis Institute of Technology, Hyderabad",
+      "photo": "/assets/uploads/team-laxmichandrahaasdonthula.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "M Jaidev",
+      "role": "Public Speaking",
+      "institution": "Chaitanya Bharathi Institute of Technology",
+      "photo": "/assets/uploads/team-mjaidev.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Sreeganesh Jasti",
+      "role": "Public Speaking",
+      "institution": "VNR Vignana Jyothi Institute of Engineering and Technology",
+      "photo": "/assets/uploads/team-sreeganeshjasti.jpeg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Tanishka Chandra Vurity",
+      "role": "Public Speaking",
+      "institution": "GNITS",
+      "photo": "/assets/uploads/team-tanishkachandravurity.jpg",
+      "email": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Manoj Sivapuram",
+      "role": "Website",
+      "institution": "Geetanjali college of engineering and technology",
+      "photo": "/assets/uploads/team-manojkumarsivapuram.jpeg",
+      "email": "",
+      "linkedin": ""
+    }
+  ]
+}
