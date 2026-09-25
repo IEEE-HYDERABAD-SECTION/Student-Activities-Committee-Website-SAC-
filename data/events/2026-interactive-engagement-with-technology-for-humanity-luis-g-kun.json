@@ -1,0 +1,59 @@
+{
+  "mode": "in-person",
+  "slug": "2026-interactive-engagement-with-technology-for-humanity-luis-g-kun",
+  "poster": "/assets/uploads/event-luis-kun-poster-session.jpg",
+  "featured": false,
+  "date": "2026-08-17T18:00:00.000+05:30",
+  "venue": "The Plaza Hotel",
+  "register_url": "",
+  "vtools_id": "",
+  "title": "Interactive Engagement with Technology for Humanity: IEEE Leadership, Professional Growth and Societal Impact",
+  "images": [
+    {
+      "src": "/assets/uploads/event-luis-kun-group.jpg",
+      "alt": "Group photograph of participants with Prof. Luis G. Kun at the IEEE Hyderabad Section programme",
+      "caption": "Participants with Prof. Luis G. Kun at the special section-level programme"
+    }
+  ],
+  "tags": [
+    "Technology for Humanity",
+    "IEEE Leadership",
+    "Professional Development",
+    "SSIT",
+    "Networking",
+    "IEEE Hyderabad Section"
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "text": "About the Programme"
+    },
+    {
+      "type": "text",
+      "text": "This special IEEE Hyderabad Section section-level programme was an interactive engagement centered on technology for humanity, IEEE leadership, professional growth, and societal impact."
+    },
+    {
+      "type": "heading",
+      "text": "Featured Guest"
+    },
+    {
+      "type": "text",
+      "text": "The programme featured Prof. Luis G. Kun, IEEE Life Fellow and Past President of the IEEE Society on Social Implications of Technology (SSIT), who also serves as Vice-Chair of the IEEE Fellows Committee."
+    },
+    {
+      "type": "image",
+      "src": "/assets/uploads/event-luis-kun-group.jpg",
+      "alt": "Group photograph of participants with Prof. Luis G. Kun at the IEEE Hyderabad Section programme",
+      "caption": "Participants with Prof. Luis G. Kun at the special section-level programme"
+    },
+    {
+      "type": "heading",
+      "text": "Networking and Dinner"
+    },
+    {
+      "type": "text",
+      "text": "The programme was followed by networking and dinner."
+    }
+  ],
+  "description": "A special IEEE Hyderabad Section interactive programme with Prof. Luis G. Kun exploring technology for humanity, IEEE leadership, professional growth, and societal impact, followed by networking and dinner."
+}

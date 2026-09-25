@@ -22,5 +22,36 @@
     { "value": "2026", "label": "Started" },
     { "value": "Zonal", "label": "Format" }
   ],
-  "gallery": []
+  "gallery": [
+    {
+      "src": "/assets/uploads/event-utsang-2k26-session.jpg",
+      "alt": "Speaker delivering a technical session before the audience at UTSANG 2K26",
+      "caption": "Technical session during UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-lamp-lighting.jpg",
+      "alt": "Dignitaries at the traditional lamp-lighting ceremony inaugurating UTSANG 2K26",
+      "caption": "Traditional lamp-lighting ceremony at the inauguration of UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-group.jpg",
+      "alt": "Group photograph of UTSANG 2K26 participants and organizers at SR University",
+      "caption": "UTSANG 2K26 participants and organizers at SR University"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-audience.jpg",
+      "alt": "Audience of students and guests during UTSANG 2K26",
+      "caption": "Audience at UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-appreciation.jpg",
+      "alt": "Certificate presentation recognizing participants at UTSANG 2K26",
+      "caption": "Formal appreciation at the conclusion of UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-backdrop.jpg",
+      "alt": "Participants photographed at the IEEE Warangal Zonal Student Congress backdrop",
+      "caption": "Participant interaction during UTSANG 2K26"
+    }
+  ]
 }

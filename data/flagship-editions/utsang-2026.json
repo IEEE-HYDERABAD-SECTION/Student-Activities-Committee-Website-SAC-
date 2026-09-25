@@ -4,33 +4,149 @@
   "flagship": "utsang",
   "year": "2026",
   "date": "2026-04-11T10:00:00.000+05:30",
-  "venue": "SRiX Auditorium, SR University Campus, Warangal, Telangana",
+  "venue": "SRiX Auditorium, SR University Campus, Warangal, Telangana, India",
   "theme": "AI-Driven Innovation in Sustainable and Resilient Emerging Technologies",
   "summary": "Warangal zonal congress hosted by IEEE Student Branch, SR University, connecting students, researchers, academicians, industry experts, and IEEE leaders.",
-  "description": "Utsang 2K26 was the IEEE Warangal Zonal Student Congress held on 11 April 2026 at SR University. Hosted by the IEEE Student Branch of SR University in collaboration with IEEE Hyderabad Section SAC, the congress focused on AI-driven innovation in sustainable and resilient emerging technologies.",
+  "description": "UTSANG 2026 - IEEE Warangal Zonal Student Congress was held on 11 April 2026 at the SRiX Auditorium, SR University Campus, Warangal. Hosted by the IEEE Student Branch of SR University (Branch Code: STB63811) in collaboration with the IEEE Hyderabad Section Student Activities Committee (SAC), the congress ran from 10:00 AM to 4:30 PM with 120 verified participants. Built around the theme of AI-driven innovation in sustainable and resilient emerging technologies, the programme combined inaugural proceedings, IEEE leadership addresses, technical sessions spanning smart grids, materials and nanotechnology, AI, and enterprise software, along with interactive Q&A, a panel discussion, and formal recognition of organizers, volunteers, and participants.",
   "cover_image": "/assets/uploads/event-30b44f69-8df1-40e9-a265-d345a90cfb96.jpeg",
   "vtools_url": "https://events.vtools.ieee.org/m/553626",
   "related_event_slug": "2026-ieee-hyderabad-section-sac-proudly-presents-utsang-2k26-wara",
-  "report_pdf": "",
+  "report_pdf": "/assets/reports/utsang-2k26-report.pdf",
   "outcomes": [
     "120 verified participants from the Warangal zone and broader Hyderabad Section",
-    "Regional networking between student branches, IEEE leaders, faculty, and students",
-    "Theme-focused learning around AI-driven sustainable and resilient emerging technologies"
+    "Cross-branch interaction among students, faculty, IEEE leaders, researchers, and industry professionals",
+    "Technical exposure spanning smart grids and sustainable energy systems, materials and nanotechnology, AI, and enterprise software",
+    "Leadership and professional-development engagement for student delegates",
+    "Interactive Q&A sessions and panel discussion with subject-matter experts",
+    "Networking among participants from the Warangal zone and the broader Hyderabad Section",
+    "Recognition of organizers, volunteers, and participants"
   ],
-  "speakers": [],
+  "speakers": [
+    {
+      "name": "Shri MGPL Narayana",
+      "role": "Chair, IEEE Hyderabad Section",
+      "organization": ""
+    },
+    {
+      "name": "Shri Bala Prasad Peddigari",
+      "role": "Vice Chair, IEEE Hyderabad Section",
+      "organization": ""
+    },
+    {
+      "name": "Shri Sreenivas Jasti",
+      "role": "Treasurer, IEEE Hyderabad Section",
+      "organization": ""
+    },
+    {
+      "name": "Professor D.V.S.S. Siva Sarma",
+      "role": "Member, IEEE Hyderabad Section Executive Committee",
+      "organization": ""
+    },
+    {
+      "name": "Professor Y. Padma Sai",
+      "role": "Chair, Student Activities Committee, IEEE Hyderabad Section",
+      "organization": ""
+    },
+    {
+      "name": "Dr. Sasikala Marta",
+      "role": "Dean, School of Computer Science and Artificial Intelligence",
+      "organization": "SR University"
+    },
+    {
+      "name": "Dr. Leo Joseph",
+      "role": "Dean, School of Engineering",
+      "organization": "SR University"
+    },
+    {
+      "name": "Dr. Archana Reddy",
+      "role": "Dean, Operations and Growth",
+      "organization": "SR University"
+    },
+    {
+      "name": "Dr. A. Chakradar",
+      "role": "Branch Counsellor; Vice Chair, CAS & EDS Joint Chapter, IEEE Hyderabad Section",
+      "organization": "SR University"
+    },
+    {
+      "name": "Dr. VSK Murthy Balijepalli",
+      "role": "Secretary, IEEE Power & Energy Society, Region 10",
+      "organization": ""
+    },
+    {
+      "name": "Dr. C. Thirmal",
+      "role": "Chair, Nano Technology Council, IEEE Hyderabad Section",
+      "organization": "VNR VJIET"
+    },
+    {
+      "name": "Mr. Mahesh Nirati",
+      "role": "Secretary, IEEE Computer Society, Hyderabad Section",
+      "organization": "HCL Technologies"
+    }
+  ],
   "schedule": [
     {
       "time": "10:00 AM",
       "title": "Congress Opening",
-      "description": "Formal opening of the Warangal Zonal Student Congress."
+      "description": "Formal opening of the Warangal Zonal Student Congress at the SRiX Auditorium."
     },
     {
-      "time": "10:00 AM - 4:30 PM",
-      "title": "Technical and Professional Sessions",
-      "description": "Sessions centered on AI-driven innovation, sustainability, resilience, and emerging technologies."
+      "time": "",
+      "title": "Inaugural Proceedings",
+      "description": "Traditional lamp-lighting ceremony followed by a cultural performance by SR University students."
+    },
+    {
+      "time": "",
+      "title": "IEEE Leadership Addresses",
+      "description": "Addresses by the IEEE Hyderabad Section executive leadership and SR University academic leadership."
+    },
+    {
+      "time": "",
+      "title": "Technical Sessions",
+      "description": "Sessions on smart grids and demand response, materials science and nanotechnology, and software lifecycle and enterprise deployment."
+    },
+    {
+      "time": "",
+      "title": "Interactive Q&A and Panel Discussion",
+      "description": "Open interaction between student delegates and the assembled experts."
+    },
+    {
+      "time": "",
+      "title": "Formal Appreciation and Conclusion",
+      "description": "Recognition of organizers, volunteers, and participants at the close of the congress."
     }
   ],
   "sponsors": [],
   "team": [],
-  "gallery": []
+  "gallery": [
+    {
+      "src": "/assets/uploads/event-utsang-2k26-session.jpg",
+      "alt": "Speaker delivering a technical session before the audience at UTSANG 2K26",
+      "caption": "Technical session during UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-lamp-lighting.jpg",
+      "alt": "Dignitaries at the traditional lamp-lighting ceremony inaugurating UTSANG 2K26",
+      "caption": "Traditional lamp-lighting ceremony at the inauguration of UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-group.jpg",
+      "alt": "Group photograph of UTSANG 2K26 participants and organizers at SR University",
+      "caption": "UTSANG 2K26 participants and organizers at SR University"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-audience.jpg",
+      "alt": "Audience of students and guests during UTSANG 2K26",
+      "caption": "Audience at UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-appreciation.jpg",
+      "alt": "Certificate presentation recognizing participants at UTSANG 2K26",
+      "caption": "Formal appreciation at the conclusion of UTSANG 2K26"
+    },
+    {
+      "src": "/assets/uploads/event-utsang-2k26-backdrop.jpg",
+      "alt": "Participants photographed at the IEEE Warangal Zonal Student Congress backdrop",
+      "caption": "Participant interaction during UTSANG 2K26"
+    }
+  ]
 }

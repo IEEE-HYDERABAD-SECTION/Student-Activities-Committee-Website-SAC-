@@ -1,0 +1,85 @@
+{
+  "title": "UDGAMA",
+  "slug": "udgama",
+  "tagline": "Empowering Future Engineers Through Innovation, Leadership and IEEE Excellence.",
+  "category": "Guntur Subsection Student Congress",
+  "started_year": "",
+  "frequency": "Annual",
+  "featured": true,
+  "order": 7,
+  "short_description": "UDGAMA is the IEEE Guntur Subsection Student Congress, bringing together students, IEEE volunteers, researchers, academicians and industry professionals for technical learning, innovation, leadership development, competitions and professional networking.",
+  "long_description": "UDGAMA is the annual flagship Student Congress of the IEEE Guntur Subsection, organized with the IEEE Hyderabad Section Student Activities Committee. Each edition brings engineering students together with IEEE leaders, researchers, academicians, and industry professionals for keynote and technical sessions, research poster presentations, innovation showcases, startup pitching, coding and ideation competitions, and professional networking.",
+  "cover_image": "/assets/uploads/event-udgama-2026-stage.jpg",
+  "logo": "",
+  "theme_color": "#0072ce",
+  "tags": [
+    "Guntur Subsection",
+    "Student Congress",
+    "IEEE Hyderabad Section",
+    "Student Activities",
+    "Innovation",
+    "Leadership",
+    "Professional Development"
+  ],
+  "highlights": [
+    "IEEE leadership and volunteer development",
+    "Keynote and technical sessions",
+    "Technical competitions",
+    "Research poster presentations",
+    "Innovation project expo",
+    "Startup / innovation pitching",
+    "Industry interaction",
+    "Networking and professional development"
+  ],
+  "stats": [
+    { "value": "2026", "label": "Latest Edition" },
+    { "value": "Guntur", "label": "Subsection" }
+  ],
+  "gallery": [
+    {
+      "src": "/assets/uploads/event-udgama-2026-stage.jpg",
+      "alt": "Panel discussion on stage with the UDGAMA 2026 backdrop",
+      "caption": "Panel discussion during UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-keynote.jpg",
+      "alt": "Speaker delivering a technical session at UDGAMA 2026, Chalapathi University",
+      "caption": "Technical session during UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-lamp-lighting.jpg",
+      "alt": "Dignitaries at the traditional lamp-lighting ceremony inaugurating UDGAMA 2026",
+      "caption": "Traditional lamp-lighting ceremony at the inauguration of UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-panel.jpg",
+      "alt": "Panelists seated on stage during a discussion at UDGAMA 2026",
+      "caption": "Panel discussion during UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-audience.jpg",
+      "alt": "Audience of students and guests during UDGAMA 2026",
+      "caption": "Participants at UDGAMA 2026, IEEE Guntur Subsection Student Congress"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-students.jpg",
+      "alt": "Student participants seated during UDGAMA 2026",
+      "caption": "Student participants at UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-hall.jpg",
+      "alt": "Participants gathered in the congress hall at UDGAMA 2026",
+      "caption": "Participants at UDGAMA 2026, IEEE Guntur Subsection Student Congress"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-guests.jpg",
+      "alt": "Guests and participants seated at UDGAMA 2026",
+      "caption": "Guests and participants at UDGAMA 2026"
+    },
+    {
+      "src": "/assets/uploads/event-udgama-2026-participants.jpg",
+      "alt": "Participants and IEEE volunteers at UDGAMA 2026",
+      "caption": "Participants and IEEE volunteers at UDGAMA 2026"
+    }
+  ]
+}

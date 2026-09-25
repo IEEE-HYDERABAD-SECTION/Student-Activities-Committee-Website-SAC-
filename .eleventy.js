@@ -43,10 +43,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("data/");
 
   // Date filter - display dates nicely from ISO strings
+  // timeZone is pinned to Asia/Kolkata because every stored timestamp carries
+  // an explicit +05:30 offset; without this the rendered hour depends on the
+  // build machine's local timezone (e.g. UTC runners shift IST times by -5:30).
   eleventyConfig.addFilter("displayDate", (iso) => {
     if (!iso) return "";
     const d = new Date(iso);
     return d.toLocaleDateString("en-IN", {
+      timeZone: "Asia/Kolkata",
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -57,6 +61,7 @@ module.exports = function (eleventyConfig) {
     if (!iso) return "";
     const d = new Date(iso);
     return d.toLocaleTimeString("en-IN", {
+      timeZone: "Asia/Kolkata",
       hour: "numeric",
       minute: "2-digit",
       hour12: true,
